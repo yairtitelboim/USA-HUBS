@@ -1,0 +1,60 @@
+{
+  "status": "success",
+  "file_path": "data/final/county_scores.geojson",
+  "feature_count": 9705,
+  "fields": {
+    "GEOID": {
+      "dtype": "object",
+      "count": 9705,
+      "null_count": 0,
+      "null_percentage": 0.0
+    },
+    "obsolescence_score": {
+      "dtype": "float64",
+      "count": 9705,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "min": 0.0,
+      "max": 0.82,
+      "mean": 0.0004108755918647727,
+      "median": 0.0,
+      "std": 0.016632833823295237,
+      "zeros_count": 9699,
+      "zeros_percentage": 99.94,
+      "negative_count": 0,
+      "negative_percentage": 0.0
+    },
+    "confidence": {
+      "dtype": "float64",
+      "count": 9705,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "min": 0.0,
+      "max": 0.88,
+      "mean": 0.0004989021368464954,
+      "median": 0.0,
+      "std": 0.020094221653813256,
+      "zeros_count": 9699,
+      "zeros_percentage": 99.94,
+      "negative_count": 0,
+      "negative_percentage": 0.0
+    },
+    "tile_count": {
+      "dtype": "float64",
+      "count": 9705,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "min": 0.0,
+      "max": 8.0,
+      "mean": 0.002575991756826378,
+      "median": 0.0,
+      "std": 0.12388646647327904,
+      "zeros_count": 9699,
+      "zeros_percentage": 99.94,
+      "negative_count": 0,
+      "negative_percentage": 0.0
+    }
+  },
+  "missing_fields": [],
+  "issues": []
+}

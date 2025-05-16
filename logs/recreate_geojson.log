@@ -1,0 +1,8 @@
+2025-05-09 08:48:12,724 - INFO - Extracting valid features from data/final/real_county_scores.geojson
+2025-05-09 08:48:12,751 - INFO - Extracted properties for 1 counties
+2025-05-09 08:48:12,751 - INFO - Recreating GeoJSON file from data/tl_2024_us_county/tl_2024_us_county.shp
+2025-05-09 08:48:13,018 - INFO - Loaded 3235 counties from shapefile
+2025-05-09 08:48:13,021 - INFO - Found 1 counties with data
+2025-05-09 08:48:13,050 - INFO - Created 1 records
+2025-05-09 08:48:13,050 - INFO - Saved 1 counties to data/final/real_county_scores_fixed.geojson
+2025-05-09 08:48:13,074 - INFO - Successfully recreated GeoJSON file: data/final/real_county_scores_fixed.geojson

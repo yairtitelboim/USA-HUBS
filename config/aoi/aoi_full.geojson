@@ -1,0 +1,23 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Houston Full AOI"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-95.5, 29.6],
+            [-95.5, 29.9],
+            [-95.2, 29.9],
+            [-95.2, 29.6],
+            [-95.5, 29.6]
+          ]
+        ]
+      }
+    }
+  ]
+}

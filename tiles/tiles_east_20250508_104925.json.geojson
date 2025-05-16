@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "tiles_east_20250508_104925.json",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "properties": { "tile_id": "r00_c00", "row": 0, "col": 0, "minx": -87.73489599999999, "miny": 24.296308, "maxx": -66.78544400000001, "maxy": 45.789244000000004, "width_m": 20.94945199999998, "height_m": 21.492936000000004 } }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -66.785444, 24.296308 ], [ -66.785444, 45.789244 ], [ -87.734896, 45.789244 ], [ -87.734896, 24.296308 ], [ -66.785444, 24.296308 ] ] ] } }
+]
+}

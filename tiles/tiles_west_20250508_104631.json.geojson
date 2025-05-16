@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "tiles_west_20250508_104631.json",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "properties": { "tile_id": "r00_c00", "row": 0, "col": 0, "minx": -161.148176, "miny": 31.232347999999998, "maxx": -101.941522, "maxy": 68.600021, "width_m": 59.206654, "height_m": 37.367672999999996 } }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -101.941522, 31.232348 ], [ -101.941522, 68.600021 ], [ -161.148176, 68.600021 ], [ -161.148176, 31.232348 ], [ -101.941522, 31.232348 ] ] ] } }
+]
+}

@@ -1,0 +1,28 @@
+{
+  "total_counties": 230,
+  "counties_with_data": 230,
+  "coverage_percentage": 100.0,
+  "score_statistics": {
+    "min": 0.3092606921614755,
+    "max": 0.9312919835359662,
+    "mean": 0.5911241495480574,
+    "median": 0.5839237435916004,
+    "std": 0.1506835495074706
+  },
+  "confidence_statistics": {
+    "counties_with_confidence": 230,
+    "min": 0.7001748628831914,
+    "max": 0.9484635486326263,
+    "mean": 0.8253202239583278,
+    "median": 0.8279062756967968
+  },
+  "tile_count_statistics": {
+    "counties_with_tiles": 230,
+    "min": 10,
+    "max": 30,
+    "mean": 19.743478260869566,
+    "total_tiles": 4541
+  },
+  "states_coverage": {},
+  "missing_columns": []
+}

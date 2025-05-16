@@ -1,0 +1,185 @@
+{
+  "county_fips": "18251",
+  "data_points": [
+    {
+      "timestamp": "2023-01-15T00:00:00",
+      "metrics": {
+        "obsolescence_score": 0.3545401188473625,
+        "growth_potential_score": 0.1123435679493969,
+        "bivariate_score": 0.03983030193251592
+      },
+      "metadata": {
+        "county_name": "Sample County 1",
+        "state_fips": "18",
+        "image_count": 11,
+        "confidence": 0.7558026845372057,
+        "data_source": "real_satellite"
+      }
+    },
+    {
+      "timestamp": "2023-02-15T00:00:00",
+      "metrics": {
+        "obsolescence_score": 0.3745401188473625,
+        "growth_potential_score": 0.12734356794939689,
+        "bivariate_score": 0.04769527507421429
+      },
+      "metadata": {
+        "county_name": "Sample County 1",
+        "state_fips": "18",
+        "image_count": 12,
+        "confidence": 0.7558026845372057,
+        "data_source": "real_satellite"
+      }
+    },
+    {
+      "timestamp": "2023-03-15T00:00:00",
+      "metrics": {
+        "obsolescence_score": 0.3945401188473625,
+        "growth_potential_score": 0.1423435679493969,
+        "bivariate_score": 0.05616024821591267
+      },
+      "metadata": {
+        "county_name": "Sample County 1",
+        "state_fips": "18",
+        "image_count": 13,
+        "confidence": 0.7558026845372057,
+        "data_source": "real_satellite"
+      }
+    },
+    {
+      "timestamp": "2023-04-15T00:00:00",
+      "metrics": {
+        "obsolescence_score": 0.41454011884736247,
+        "growth_potential_score": 0.1573435679493969,
+        "bivariate_score": 0.06522522135761105
+      },
+      "metadata": {
+        "county_name": "Sample County 1",
+        "state_fips": "18",
+        "image_count": 14,
+        "confidence": 0.7558026845372057,
+        "data_source": "real_satellite"
+      }
+    },
+    {
+      "timestamp": "2023-05-15T00:00:00",
+      "metrics": {
+        "obsolescence_score": 0.3345401188473625,
+        "growth_potential_score": 0.1723435679493969,
+        "bivariate_score": 0.05765583770436974
+      },
+      "metadata": {
+        "county_name": "Sample County 1",
+        "state_fips": "18",
+        "image_count": 15,
+        "confidence": 0.7558026845372057,
+        "data_source": "real_satellite"
+      }
+    },
+    {
+      "timestamp": "2023-06-15T00:00:00",
+      "metrics": {
+        "obsolescence_score": 0.3545401188473625,
+        "growth_potential_score": 0.0973435679493969,
+        "bivariate_score": 0.03451220014980548
+      },
+      "metadata": {
+        "county_name": "Sample County 1",
+        "state_fips": "18",
+        "image_count": 16,
+        "confidence": 0.7558026845372057,
+        "data_source": "real_satellite"
+      }
+    },
+    {
+      "timestamp": "2023-07-15T00:00:00",
+      "metrics": {
+        "obsolescence_score": 0.3745401188473625,
+        "growth_potential_score": 0.1123435679493969,
+        "bivariate_score": 0.04207717329150386
+      },
+      "metadata": {
+        "county_name": "Sample County 1",
+        "state_fips": "18",
+        "image_count": 10,
+        "confidence": 0.7558026845372057,
+        "data_source": "real_satellite"
+      }
+    },
+    {
+      "timestamp": "2023-08-15T00:00:00",
+      "metrics": {
+        "obsolescence_score": 0.3945401188473625,
+        "growth_potential_score": 0.12734356794939689,
+        "bivariate_score": 0.05024214643320223
+      },
+      "metadata": {
+        "county_name": "Sample County 1",
+        "state_fips": "18",
+        "image_count": 11,
+        "confidence": 0.7558026845372057,
+        "data_source": "real_satellite"
+      }
+    },
+    {
+      "timestamp": "2023-09-15T00:00:00",
+      "metrics": {
+        "obsolescence_score": 0.41454011884736247,
+        "growth_potential_score": 0.1423435679493969,
+        "bivariate_score": 0.0590071195749006
+      },
+      "metadata": {
+        "county_name": "Sample County 1",
+        "state_fips": "18",
+        "image_count": 12,
+        "confidence": 0.7558026845372057,
+        "data_source": "real_satellite"
+      }
+    },
+    {
+      "timestamp": "2023-10-15T00:00:00",
+      "metrics": {
+        "obsolescence_score": 0.3345401188473625,
+        "growth_potential_score": 0.1573435679493969,
+        "bivariate_score": 0.0526377359216593
+      },
+      "metadata": {
+        "county_name": "Sample County 1",
+        "state_fips": "18",
+        "image_count": 13,
+        "confidence": 0.7558026845372057,
+        "data_source": "real_satellite"
+      }
+    },
+    {
+      "timestamp": "2023-11-15T00:00:00",
+      "metrics": {
+        "obsolescence_score": 0.3545401188473625,
+        "growth_potential_score": 0.1723435679493969,
+        "bivariate_score": 0.061102709063357664
+      },
+      "metadata": {
+        "county_name": "Sample County 1",
+        "state_fips": "18",
+        "image_count": 14,
+        "confidence": 0.7558026845372057,
+        "data_source": "real_satellite"
+      }
+    },
+    {
+      "timestamp": "2023-12-15T00:00:00",
+      "metrics": {
+        "obsolescence_score": 0.3745401188473625,
+        "growth_potential_score": 0.0973435679493969,
+        "bivariate_score": 0.03645907150879342
+      },
+      "metadata": {
+        "county_name": "Sample County 1",
+        "state_fips": "18",
+        "image_count": 15,
+        "confidence": 0.7558026845372057,
+        "data_source": "real_satellite"
+      }
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "county_fips": "48113",
+  "data_points": [
+    {
+      "timestamp": "2023-01-15T00:00:00",
+      "metrics": {
+        "obsolescence_score": 0.45,
+        "growth_potential_score": 0.71,
+        "bivariate_score": 0.320
+      },
+      "metadata": {
+        "county_name": "Dallas County",
+        "state_fips": "48",
+        "image_count": 11
+      }
+    },
+    {
+      "timestamp": "2023-02-15T00:00:00",
+      "metrics": {
+        "obsolescence_score": 0.46,
+        "growth_potential_score": 0.72,
+        "bivariate_score": 0.331
+      },
+      "metadata": {
+        "county_name": "Dallas County",
+        "state_fips": "48",
+        "image_count": 10
+      }
+    },
+    {
+      "timestamp": "2023-03-15T00:00:00",
+      "metrics": {
+        "obsolescence_score": 0.47,
+        "growth_potential_score": 0.73,
+        "bivariate_score": 0.343
+      },
+      "metadata": {
+        "county_name": "Dallas County",
+        "state_fips": "48",
+        "image_count": 12
+      }
+    },
+    {
+      "timestamp": "2023-04-15T00:00:00",
+      "metrics": {
+        "obsolescence_score": 0.48,
+        "growth_potential_score": 0.74,
+        "bivariate_score": 0.355
+      },
+      "metadata": {
+        "county_name": "Dallas County",
+        "state_fips": "48",
+        "image_count": 14
+      }
+    },
+    {
+      "timestamp": "2023-05-15T00:00:00",
+      "metrics": {
+        "obsolescence_score": 0.46,
+        "growth_potential_score": 0.75,
+        "bivariate_score": 0.345
+      },
+      "metadata": {
+        "county_name": "Dallas County",
+        "state_fips": "48",
+        "image_count": 13
+      }
+    },
+    {
+      "timestamp": "2023-06-15T00:00:00",
+      "metrics": {
+        "obsolescence_score": 0.45,
+        "growth_potential_score": 0.76,
+        "bivariate_score": 0.342
+      },
+      "metadata": {
+        "county_name": "Dallas County",
+        "state_fips": "48",
+        "image_count": 15
+      }
+    },
+    {
+      "timestamp": "2023-07-15T00:00:00",
+      "metrics": {
+        "obsolescence_score": 0.44,
+        "growth_potential_score": 0.77,
+        "bivariate_score": 0.339
+      },
+      "metadata": {
+        "county_name": "Dallas County",
+        "state_fips": "48",
+        "image_count": 12
+      }
+    },
+    {
+      "timestamp": "2023-08-15T00:00:00",
+      "metrics": {
+        "obsolescence_score": 0.43,
+        "growth_potential_score": 0.78,
+        "bivariate_score": 0.335
+      },
+      "metadata": {
+        "county_name": "Dallas County",
+        "state_fips": "48",
+        "image_count": 13
+      }
+    },
+    {
+      "timestamp": "2023-09-15T00:00:00",
+      "metrics": {
+        "obsolescence_score": 0.42,
+        "growth_potential_score": 0.79,
+        "bivariate_score": 0.332
+      },
+      "metadata": {
+        "county_name": "Dallas County",
+        "state_fips": "48",
+        "image_count": 14
+      }
+    },
+    {
+      "timestamp": "2023-10-15T00:00:00",
+      "metrics": {
+        "obsolescence_score": 0.41,
+        "growth_potential_score": 0.80,
+        "bivariate_score": 0.328
+      },
+      "metadata": {
+        "county_name": "Dallas County",
+        "state_fips": "48",
+        "image_count": 12
+      }
+    },
+    {
+      "timestamp": "2023-11-15T00:00:00",
+      "metrics": {
+        "obsolescence_score": 0.40,
+        "growth_potential_score": 0.81,
+        "bivariate_score": 0.324
+      },
+      "metadata": {
+        "county_name": "Dallas County",
+        "state_fips": "48",
+        "image_count": 13
+      }
+    },
+    {
+      "timestamp": "2023-12-15T00:00:00",
+      "metrics": {
+        "obsolescence_score": 0.39,
+        "growth_potential_score": 0.82,
+        "bivariate_score": 0.320
+      },
+      "metadata": {
+        "county_name": "Dallas County",
+        "state_fips": "48",
+        "image_count": 14
+      }
+    }
+  ]
+} 

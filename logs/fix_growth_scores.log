@@ -1,0 +1,64 @@
+2025-05-10 10:40:35,623 - INFO - Starting to fix growth potential scores
+2025-05-10 10:40:35,623 - INFO - Fixing growth potential scores in data/final/fixed_county_scores.geojson
+2025-05-10 10:40:36,576 - ERROR - Error fixing growth potential scores: Failed to read GeoJSON data
+2025-05-10 10:40:36,577 - ERROR - Failed to fix growth potential scores (attempt 1/5)
+2025-05-10 10:40:36,577 - INFO - Retrying in 30 seconds...
+2025-05-10 10:41:06,578 - INFO - Fixing growth potential scores in data/final/fixed_county_scores.geojson
+2025-05-10 10:41:09,072 - ERROR - Error fixing growth potential scores: Failed to read GeoJSON data
+2025-05-10 10:41:09,072 - ERROR - Failed to fix growth potential scores (attempt 2/5)
+2025-05-10 10:41:09,072 - INFO - Retrying in 30 seconds...
+2025-05-10 10:41:39,077 - INFO - Fixing growth potential scores in data/final/fixed_county_scores.geojson
+2025-05-10 10:41:45,289 - INFO - Loaded 2577 counties from data/final/fixed_county_scores.geojson
+2025-05-10 10:41:45,325 - INFO - Created backup of original file at data/final/fixed_county_scores.geojson.bak
+2025-05-10 10:41:45,325 - INFO - Counties with growth potential scores: 2006
+2025-05-10 10:41:45,325 - INFO - Counties without growth potential scores: 571
+2025-05-10 10:41:45,325 - INFO - Updating growth potential scores for all counties
+2025-05-10 10:41:57,012 - INFO - Created 2,577 records
+2025-05-10 10:41:57,016 - INFO - Saved 2577 counties with updated growth potential scores to temporary file
+2025-05-10 10:42:03,230 - INFO - Verified temporary file is valid with 2577 counties
+2025-05-10 10:42:03,231 - INFO - Replaced original file with updated file
+2025-05-10 10:42:03,265 - INFO - Copied updated file to React app directory: county-viz-app/public/data/final/fixed_county_scores.geojson
+2025-05-10 10:42:03,294 - INFO - Successfully fixed growth potential scores
+2025-05-10 10:42:03,294 - INFO - Process completed successfully
+2025-05-10 12:39:49,423 - INFO - Starting to fix growth potential scores
+2025-05-10 12:39:49,423 - INFO - Fixing growth potential scores in data/final/fixed_county_scores.geojson
+2025-05-10 12:39:55,992 - INFO - Loaded 2620 counties from data/final/fixed_county_scores.geojson
+2025-05-10 12:39:56,013 - INFO - Created backup of original file at data/final/fixed_county_scores.geojson.bak
+2025-05-10 12:39:56,013 - INFO - Counties with growth potential scores: 2577
+2025-05-10 12:39:56,013 - INFO - Counties without growth potential scores: 43
+2025-05-10 12:39:56,013 - INFO - Updating growth potential scores for all counties
+2025-05-10 12:40:08,437 - INFO - Created 2,620 records
+2025-05-10 12:40:08,440 - INFO - Saved 2620 counties with updated growth potential scores to temporary file
+2025-05-10 12:40:15,012 - INFO - Verified temporary file is valid with 2620 counties
+2025-05-10 12:40:15,012 - INFO - Replaced original file with updated file
+2025-05-10 12:40:15,048 - INFO - Copied updated file to React app directory: county-viz-app/public/data/final/fixed_county_scores.geojson
+2025-05-10 12:40:15,074 - INFO - Successfully fixed growth potential scores
+2025-05-10 12:40:15,074 - INFO - Process completed successfully
+2025-05-10 19:12:30,357 - INFO - Starting to fix growth potential scores
+2025-05-10 19:12:30,357 - INFO - Fixing growth potential scores in data/final/fixed_county_scores.geojson
+2025-05-10 19:12:38,191 - INFO - Loaded 3237 counties from data/final/fixed_county_scores.geojson
+2025-05-10 19:12:38,255 - INFO - Created backup of original file at data/final/fixed_county_scores.geojson.bak
+2025-05-10 19:12:38,255 - INFO - Counties with growth potential scores: 2577
+2025-05-10 19:12:38,256 - INFO - Counties without growth potential scores: 660
+2025-05-10 19:12:38,256 - INFO - Updating growth potential scores for all counties
+2025-05-10 19:12:52,767 - INFO - Created 3,237 records
+2025-05-10 19:12:52,771 - INFO - Saved 3237 counties with updated growth potential scores to temporary file
+2025-05-10 19:13:00,652 - INFO - Verified temporary file is valid with 3237 counties
+2025-05-10 19:13:00,659 - INFO - Replaced original file with updated file
+2025-05-10 19:13:00,738 - INFO - Copied updated file to React app directory: county-viz-app/public/data/final/fixed_county_scores.geojson
+2025-05-10 19:13:00,766 - INFO - Successfully fixed growth potential scores
+2025-05-10 19:13:00,766 - INFO - Process completed successfully
+2025-05-11 19:38:24,232 - INFO - Starting to fix growth potential scores
+2025-05-11 19:38:24,232 - INFO - Fixing growth potential scores in data/final/fixed_county_scores.geojson
+2025-05-11 19:38:32,120 - INFO - Loaded 3237 counties from data/final/fixed_county_scores.geojson
+2025-05-11 19:38:32,226 - INFO - Created backup of original file at data/final/fixed_county_scores.geojson.bak
+2025-05-11 19:38:32,226 - INFO - Counties with growth potential scores: 3237
+2025-05-11 19:38:32,227 - INFO - Counties without growth potential scores: 0
+2025-05-11 19:38:32,227 - INFO - Updating growth potential scores for all counties
+2025-05-11 19:38:46,615 - INFO - Created 3,237 records
+2025-05-11 19:38:46,620 - INFO - Saved 3237 counties with updated growth potential scores to temporary file
+2025-05-11 19:38:54,503 - INFO - Verified temporary file is valid with 3237 counties
+2025-05-11 19:38:54,511 - INFO - Replaced original file with updated file
+2025-05-11 19:38:54,601 - INFO - Copied updated file to React app directory: county-viz-app/public/data/final/fixed_county_scores.geojson
+2025-05-11 19:38:54,637 - INFO - Successfully fixed growth potential scores
+2025-05-11 19:38:54,638 - INFO - Process completed successfully

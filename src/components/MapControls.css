@@ -1,0 +1,125 @@
+/* Add these styles at the appropriate place in your file */
+
+/* Bivariate button styling - uses a gradient to represent both metrics */
+#bivariate-button {
+  background: linear-gradient(135deg, #4575b4 0%, #f7f7f7 50%, #d73027 100%);
+  color: #000;
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.7);
+  font-weight: bold;
+}
+
+#bivariate-button:hover {
+  background: linear-gradient(135deg, #5085c4 0%, #ffffff 50%, #e74037 100%);
+}
+
+#bivariate-button.clicked, 
+#bivariate-button.active {
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.6);
+  background: linear-gradient(135deg, #3565a4 0%, #e7e7e7 50%, #c72017 100%);
+}
+
+/* Toggle buttons styling */
+.toggle-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10pxtoggleAnimations;
+  width: 100%;
+}
+
+.toggle-button {
+  padding: 10px 15px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 4px;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  width: 180px;
+  text-align: center;
+}
+
+.toggle-button:hover {
+  background-color: #444;
+}
+
+/* Amazon toggle button active state */
+.toggle-button.amazon-active {
+  background-color: #FF9900; /* Amazon orange */
+  color: #000;
+}
+
+/* UPS toggle button active state */
+.toggle-button.ups-active {
+  background-color: #00AA00; /* UPS green */
+  color: #fff;
+}
+
+/* Rail toggle button active state */
+.toggle-button.rail-active {
+  background-color: #C71585 !important; /* Dark pink to match the rail markers */
+  color: #fff !important;
+}
+
+/* Animation toggle button active state (if needed) */
+.toggle-button.animation-active {
+  background-color: #4B0082; /* Indigo */
+  color: #fff;
+}
+
+/* Make sure the rail button is always visible */
+#toggleRail {
+  display: block !important;
+  margin-top: 10px;
+  background-color: #333;
+  color: white;
+}
+
+/* Rail toggle button specific styles */
+#toggleRail {
+  background-color: rgba(60, 0, 40, 0.85);
+  border: 1px solid rgba(255, 0, 170, 0.2); /* Dark pink border */
+}
+
+#toggleRail.rail-active {
+  background-color: rgba(90, 0, 60, 0.95);
+  border: 2px solid rgba(255, 0, 170, 0.6);
+  color: #FF00AA;
+}
+
+#toggleRail:hover {
+  background-color: rgba(120, 0, 80, 0.9);
+  transform: translateY(-1px);
+}
+
+#toggleRail:active {
+  transform: translateY(1px);
+}
+
+/* Road layer toggle button specific styles */
+#toggleRoads {
+  background-color: rgba(40, 40, 40, 0.85);
+  border: 1px solid rgba(200, 200, 200, 0.2); /* Gray border */
+}
+
+#toggleRoads.road-active {
+  background-color: rgba(60, 60, 60, 0.95);
+  border: 2px solid rgba(200, 200, 200, 0.6);
+  color: #FFFFFF;
+}
+
+#toggleRoads:hover {
+  background-color: rgba(80, 80, 80, 0.9);
+  transform: translateY(-1px);
+}
+
+#toggleRoads:active {
+  transform: translateY(1px);
+}
+
+.control-button {
+  // ... existing code ...
+} 

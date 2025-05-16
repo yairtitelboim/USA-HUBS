@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "tiles_midwest_20250508_105210.json",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "properties": { "tile_id": "r00_c00", "row": 0, "col": 0, "minx": -104.155487, "miny": 36.959652999999996, "maxx": -81.164744, "maxy": 47.947639, "width_m": 22.990742999999995, "height_m": 10.987986000000006 } }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -81.164744, 36.959653 ], [ -81.164744, 47.947639 ], [ -104.155487, 47.947639 ], [ -104.155487, 36.959653 ], [ -81.164744, 36.959653 ] ] ] } }
+]
+}

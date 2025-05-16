@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>County Visualization with Real Obsolescence Data</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      overflow: hidden;
+      background-color: #080808; /* Even darker background */
+      color: #e0e0e0;
+    }
+    #map {
+      width: 100vw;
+      height: 100vh;
+      background-color: #050505;
+    }
+    #status {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 5px 10px;
+      border-radius: 4px;
+      font-size: 12px;
+      z-index: 100;
+    }
+    #legend {
+      position: absolute;
+      bottom: 30px;
+      right: 15px;
+      padding: 15px;
+      background: rgba(30, 30, 30, 0.9);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+      border-radius: 6px;
+      border: 1px solid #333333;
+      z-index: 1;
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    .legend-color {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      border-radius: 3px;
+    }
+    .title {
+      text-align: center;
+      margin-bottom: 15px;
+      font-weight: bold;
+      font-size: 16px;
+      border-bottom: 1px solid #333333;
+      padding-bottom: 8px;
+    }
+    #loading {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    .spinner {
+      border: 5px solid #f3f3f3;
+      border-top: 5px solid #3498db;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 2s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    #disclaimer {
+      position: absolute;
+      bottom: 30px;
+      left: 15px;
+      padding: 10px;
+      background: rgba(30, 30, 30, 0.9);
+      color: white;
+      border-radius: 6px;
+      border: 1px solid #333333;
+      z-index: 1;
+      max-width: 300px;
+      font-size: 12px;
+    }
+    #toggle3D {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: 1;
+      padding: 10px;
+      background-color: #2196F3;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <div id="status">Loading...</div>
+  <div id="legend">
+    <div class="title">Obsolescence Score</div>
+    <div id="legend-items"></div>
+  </div>
+  <div id="disclaimer">
+    <strong>Data Coverage:</strong> This map displays real obsolescence scores for counties across the United States.
+    (Using a smaller dataset of 100 counties for testing)
+  </div>
+  <button id="toggle3D" type="button">Switch to 2D View</button>
+  <div id="loading">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Load Mapbox GL JS -->
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
+
+  <!-- Load Turf.js -->
+  <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
+
+  <!-- Load Shapefile.js -->
+  <script src="https://unpkg.com/shapefile@0.6.6/dist/shapefile.js"></script>
+
+  <script>
+    // Wait for the page to fully load
+    window.addEventListener('load', function() {
+      // Show loading status
+      const statusEl = document.getElementById('status');
+      const loadingEl = document.getElementById('loading');
+      statusEl.style.display = 'block';
+      statusEl.textContent = 'Loading Mapbox and Turf.js...';
+
+      // Check if Mapbox and Turf are loaded
+      if (typeof mapboxgl === 'undefined') {
+        statusEl.textContent = 'Error: Mapbox GL JS not loaded';
+        statusEl.style.color = 'red';
+        loadingEl.style.display = 'none';
+        return;
+      }
+
+      if (typeof turf === 'undefined') {
+        statusEl.textContent = 'Error: Turf.js not loaded';
+        statusEl.style.color = 'red';
+        loadingEl.style.display = 'none';
+        return;
+      }
+
+      // Mapbox token
+      const MAPBOX_TOKEN = 'pk.eyJ1IjoieWFpcnRpdGVsIiwiYSI6ImNsZm1wODZuNzAyNmIzcHAydTRsaWlpOTIifQ.OG_0yvbvyo6gbqOJuP1Q3g';
+      mapboxgl.accessToken = MAPBOX_TOKEN;
+
+      // Color scale for obsolescence score
+      const colorScale = [
+        [0, [44, 123, 182]], // Low (blue)
+        [0.5, [255, 255, 191]], // Medium (yellow)
+        [1, [215, 25, 28]] // High (red)
+      ];
+
+      // Function to interpolate colors based on score
+      function interpolateColor(value) {
+        // Find the color range
+        let lowerIndex = 0;
+        for (let i = 1; i < colorScale.length; i++) {
+          if (value <= colorScale[i][0]) {
+            lowerIndex = i - 1;
+            break;
+          }
+        }
+
+        const lowerValue = colorScale[lowerIndex][0];
+        const upperValue = colorScale[lowerIndex + 1][0];
+        const lowerColor = colorScale[lowerIndex][1];
+        const upperColor = colorScale[lowerIndex + 1][1];
+
+        // Calculate interpolation factor
+        const range = upperValue - lowerValue;
+        const factor = (value - lowerValue) / range;
+
+        // Interpolate RGB values
+        return [
+          Math.round(lowerColor[0] + factor * (upperColor[0] - lowerColor[0])),
+          Math.round(lowerColor[1] + factor * (upperColor[1] - lowerColor[1])),
+          Math.round(lowerColor[2] + factor * (upperColor[2] - lowerColor[2]))
+        ];
+      }
+
+      // Create legend for the map
+      function createLegend() {
+        const legendItems = document.getElementById('legend-items');
+        legendItems.innerHTML = '';
+
+        // Create 5 legend items
+        for (let i = 0; i < 5; i++) {
+          const value = i / 4; // 0, 0.25, 0.5, 0.75, 1
+          const color = interpolateColor(value);
+
+          const item = document.createElement('div');
+          item.className = 'legend-item';
+
+          const colorBox = document.createElement('div');
+          colorBox.className = 'legend-color';
+          colorBox.style.backgroundColor = `rgb(${color[0]}, ${color[1]}, ${color[2]})`;
+
+          const label = document.createElement('div');
+          label.textContent = value.toFixed(2);
+
+          item.appendChild(colorBox);
+          item.appendChild(label);
+          legendItems.appendChild(item);
+        }
+      }
+
+      // Initialize the map with an extreme fish-eye projection
+      const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/dark-v11', // Use the dark style as base
+        center: [-98.5795, 39.8283], // Center of the US
+        zoom: 3.0, // More zoomed out to show the entire US
+        pitch: 40, // Lower pitch for even flatter appearance
+        bearing: 0, // No rotation for a straight-on view
+        projection: {
+          name: 'albers', // Albers projection is good for US maps
+          center: [-98, 39], // Centered on the US
+          parallels: [25, 50] // More extreme parallels for fish-eye effect
+        }
+      });
+
+      // We're using real data from the GeoJSON file, no need for random score generation
+
+      // Function to add map layers
+      function addMapLayers() {
+        // Add a fill layer for the counties
+        map.addLayer({
+          id: 'county-fills',
+          type: 'fill',
+          source: 'counties',
+          paint: {
+            'fill-color': [
+              'interpolate',
+              ['linear'],
+              ['get', 'obsolescence_score'],
+              0, 'rgb(44, 123, 182)',
+              0.5, 'rgb(255, 255, 191)',
+              1, 'rgb(215, 25, 28)'
+            ],
+            'fill-opacity': 0.7
+          }
+        });
+
+        // Add a line layer for county boundaries with thick white lines
+        map.addLayer({
+          id: 'county-borders',
+          type: 'line',
+          source: 'counties',
+          paint: {
+            'line-color': 'white',
+            'line-width': 1,
+            'line-opacity': 0.9
+          }
+        });
+
+        // Add a 3D extrusion layer for counties with extreme blocky appearance
+        map.addLayer({
+          id: 'county-extrusions',
+          type: 'fill-extrusion',
+          source: 'counties',
+          paint: {
+            'fill-extrusion-color': [
+              'interpolate',
+              ['linear'],
+              ['get', 'obsolescence_score'],
+              0, 'rgb(44, 123, 182)', // Blue for low scores
+              0.5, 'rgb(255, 255, 191)', // Yellow for medium scores
+              1, 'rgb(215, 25, 28)' // Red for high scores
+            ],
+            'fill-extrusion-height': [
+              '*',
+              ['get', 'obsolescence_score'], // Use obsolescence score for height
+              1200000 // Super extreme height for dramatic fish-eye effect
+            ],
+            'fill-extrusion-base': 0,
+            'fill-extrusion-opacity': 1.0, // Full opacity for sharper look
+            'fill-extrusion-vertical-gradient': false // Disable gradient for blocky look
+          }
+        });
+      }
+
+      // Wait for the map to load
+      map.on('load', function() {
+        statusEl.textContent = 'Map loaded, fetching county data...';
+
+        // Load the county GeoJSON data from our verified county scores (smaller version for testing)
+        console.log('Fetching county data...');
+        fetch('http://localhost:8000/data/final/verified_county_scores_small.geojson')
+          .then(response => {
+            console.log('Response received:', response.status);
+            return response.json();
+          })
+          .then(countyData => {
+            // Data already has real obsolescence scores, confidence, and tile counts
+            console.log(`Loaded ${countyData.features.length} counties with real data`);
+
+            // Add the source
+            map.addSource('counties', {
+              type: 'geojson',
+              data: countyData
+            });
+
+            // Add map layers
+            addMapLayers();
+          })
+          .catch(error => {
+            console.error('Error loading county data:', error);
+            statusEl.textContent = 'Error loading county data. Using fallback.';
+
+            // Try loading from a different path as fallback
+            console.log('Trying fallback path...');
+            fetch('data/final/verified_county_scores_small.geojson')
+              .then(response => {
+                console.log('Fallback response received:', response.status);
+                return response.json();
+              })
+              .then(countyData => {
+                console.log(`Loaded ${countyData.features.length} counties with real data from fallback`);
+
+                // Add the source
+                map.addSource('counties', {
+                  type: 'geojson',
+                  data: countyData
+                });
+
+                // Add layers (same as in the success case)
+                addMapLayers();
+              })
+              .catch(fallbackError => {
+                console.error('Fallback also failed:', fallbackError);
+
+                // Use a fallback approach with Mapbox's boundaries
+                map.addSource('counties-fallback', {
+                  type: 'vector',
+                  url: 'mapbox://mapbox.boundaries-adm2-v3'
+                });
+
+                map.addLayer({
+                  id: 'county-fills',
+                  type: 'fill',
+                  source: 'counties-fallback',
+                  'source-layer': 'boundaries_admin_2',
+                  paint: {
+                    'fill-color': 'rgb(100, 100, 200)',
+                    'fill-opacity': 0.5
+                  }
+                });
+
+                map.addLayer({
+                  id: 'county-borders',
+                  type: 'line',
+                  source: 'counties-fallback',
+                  'source-layer': 'boundaries_admin_2',
+                  paint: {
+                    'line-color': 'white',
+                    'line-width': 1,
+                    'line-opacity': 0.9
+                  }
+                });
+          });
+
+        // Create a popup for county information
+        const popup = new mapboxgl.Popup({
+          closeButton: false,
+          closeOnClick: false
+        });
+
+        // Show popup on hover for county extrusions
+        map.on('mouseenter', 'county-extrusions', function(e) {
+          if (!e.features || e.features.length === 0) return;
+
+          map.getCanvas().style.cursor = 'pointer';
+
+          const feature = e.features[0];
+          const props = feature.properties;
+
+          // Get the center of the county for popup placement
+          const coordinates = e.lngLat;
+
+          // Create popup content
+          const html = `
+            <div style="color: #333;">
+              <strong>${props.county_name || props.NAME || props.name || 'County'}, ${props.state_name || props.STATE || props.state || ''}</strong><br>
+              Obsolescence Score: <strong>${props.obsolescence_score ? parseFloat(props.obsolescence_score).toFixed(2) : 'N/A'}</strong><br>
+              Confidence: ${props.confidence ? parseFloat(props.confidence).toFixed(2) : 'N/A'}<br>
+              Tile Count: ${props.tile_count || 'N/A'}<br>
+              FIPS: ${props.county_fips || props.FIPS || props.fips || 'N/A'}
+            </div>
+          `;
+
+          popup.setLngLat(coordinates)
+            .setHTML(html)
+            .addTo(map);
+        });
+
+        // Hide popup on mouseleave for county extrusions
+        map.on('mouseleave', 'county-extrusions', function() {
+          map.getCanvas().style.cursor = '';
+          popup.remove();
+        });
+
+        // Show popup on hover for county fills (2D view)
+        map.on('mouseenter', 'county-fills', function(e) {
+          if (!e.features || e.features.length === 0) return;
+
+          map.getCanvas().style.cursor = 'pointer';
+
+          const feature = e.features[0];
+          const props = feature.properties;
+
+          // Get the center of the county for popup placement
+          const coordinates = e.lngLat;
+
+          // Create popup content
+          const html = `
+            <div style="color: #333;">
+              <strong>${props.county_name || props.NAME || props.name || 'County'}, ${props.state_name || props.STATE || props.state || ''}</strong><br>
+              Obsolescence Score: <strong>${props.obsolescence_score ? parseFloat(props.obsolescence_score).toFixed(2) : 'N/A'}</strong><br>
+              Confidence: ${props.confidence ? parseFloat(props.confidence).toFixed(2) : 'N/A'}<br>
+              Tile Count: ${props.tile_count || 'N/A'}<br>
+              FIPS: ${props.county_fips || props.FIPS || props.fips || 'N/A'}
+            </div>
+          `;
+
+          popup.setLngLat(coordinates)
+            .setHTML(html)
+            .addTo(map);
+        });
+
+        // Hide popup on mouseleave for county fills
+        map.on('mouseleave', 'county-fills', function() {
+          map.getCanvas().style.cursor = '';
+          popup.remove();
+        });
+
+        // Create legend
+        createLegend();
+
+        // Add major city labels like in the example image
+        const majorCities = [
+          { name: 'Seattle', coordinates: [-122.3321, 47.6062] },
+          { name: 'San Francisco', coordinates: [-122.4194, 37.7749] },
+          { name: 'Los Angeles', coordinates: [-118.2437, 34.0522] },
+          { name: 'San Diego', coordinates: [-117.1611, 32.7157] },
+          { name: 'Phoenix', coordinates: [-112.0740, 33.4484] },
+          { name: 'Denver', coordinates: [-104.9903, 39.7392] },
+          { name: 'Dallas', coordinates: [-96.7970, 32.7767] },
+          { name: 'Houston', coordinates: [-95.3698, 29.7604] },
+          { name: 'Chicago', coordinates: [-87.6298, 41.8781] },
+          { name: 'Minneapolis', coordinates: [-93.2650, 44.9778] },
+          { name: 'Detroit', coordinates: [-83.0458, 42.3314] },
+          { name: 'Atlanta', coordinates: [-84.3880, 33.7490] },
+          { name: 'Miami', coordinates: [-80.1918, 25.7617] },
+          { name: 'Washington DC', coordinates: [-77.0369, 38.9072] },
+          { name: 'New York', coordinates: [-74.0060, 40.7128] },
+          { name: 'Boston', coordinates: [-71.0589, 42.3601] }
+        ];
+
+        // Add city markers and labels
+        majorCities.forEach(city => {
+          // Create a DOM element for the marker with enhanced visibility
+          const el = document.createElement('div');
+          el.className = 'city-marker';
+          el.style.color = 'rgba(255,255,255,0.9)';
+          el.style.fontSize = '12px';
+          el.style.fontWeight = 'bold';
+          el.style.textShadow = '0px 0px 8px rgba(0,0,0,0.9), 0px 0px 3px rgba(255,255,255,0.5)';
+          el.style.whiteSpace = 'nowrap';
+          el.innerHTML = `
+            <div style="position: relative;">
+              <div style="position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 1px; height: 40px; background: rgba(255,255,255,0.7);"></div>
+              <div style="position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);">${city.name}</div>
+            </div>
+          `;
+
+          // Add marker to map
+          new mapboxgl.Marker({
+            element: el,
+            anchor: 'bottom',
+            offset: [0, 0]
+          })
+            .setLngLat(city.coordinates)
+            .addTo(map);
+        });
+
+        // Add navigation controls
+        const nav = new mapboxgl.NavigationControl();
+        map.addControl(nav, 'top-right');
+
+        // Toggle 3D view on button click
+        let is3DView = true; // Start with 3D view
+        document.getElementById('toggle3D').addEventListener('click', function() {
+          is3DView = !is3DView;
+
+          if (is3DView) {
+            map.easeTo({
+              pitch: 40, // Flatter pitch for the Albers projection
+              bearing: 0, // No rotation for a straight-on view
+              duration: 1000
+            });
+
+            // Show the 3D layer if it exists
+            if (map.getLayer('county-extrusions')) {
+              map.setLayoutProperty('county-extrusions', 'visibility', 'visible');
+            }
+
+            // Hide the 2D fill layer if it exists
+            if (map.getLayer('county-fills')) {
+              map.setLayoutProperty('county-fills', 'visibility', 'none');
+            }
+
+            // Update button text
+            document.getElementById('toggle3D').textContent = 'Switch to 2D View';
+
+          } else {
+            map.easeTo({
+              pitch: 0,
+              bearing: 0,
+              duration: 1000
+            });
+
+            // Hide the 3D layer if it exists
+            if (map.getLayer('county-extrusions')) {
+              map.setLayoutProperty('county-extrusions', 'visibility', 'none');
+            }
+
+            // Show the 2D fill layer if it exists
+            if (map.getLayer('county-fills')) {
+              map.setLayoutProperty('county-fills', 'visibility', 'visible');
+            }
+
+            // Update button text
+            document.getElementById('toggle3D').textContent = 'Switch to 3D View';
+          }
+        });
+
+        // Update status and hide loading screen
+        statusEl.textContent = 'Map loaded successfully';
+        statusEl.style.color = 'green';
+        loadingEl.style.display = 'none';
+
+        // Hide status after 2 seconds
+        setTimeout(() => {
+          statusEl.style.display = 'none';
+        }, 2000);
+      });
+    });
+  </script>
+</body>
+</html>

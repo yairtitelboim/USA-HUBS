@@ -1,0 +1,161 @@
+{
+  "county_fips": "06037",
+  "data_points": [
+    {
+      "timestamp": "2023-01-15T00:00:00",
+      "metrics": {
+        "obsolescence_score": 0.42,
+        "growth_potential_score": 0.65,
+        "bivariate_score": 0.273
+      },
+      "metadata": {
+        "county_name": "Los Angeles County",
+        "state_fips": "06",
+        "image_count": 12
+      }
+    },
+    {
+      "timestamp": "2023-02-15T00:00:00",
+      "metrics": {
+        "obsolescence_score": 0.43,
+        "growth_potential_score": 0.67,
+        "bivariate_score": 0.288
+      },
+      "metadata": {
+        "county_name": "Los Angeles County",
+        "state_fips": "06",
+        "image_count": 10
+      }
+    },
+    {
+      "timestamp": "2023-03-15T00:00:00",
+      "metrics": {
+        "obsolescence_score": 0.41,
+        "growth_potential_score": 0.68,
+        "bivariate_score": 0.279
+      },
+      "metadata": {
+        "county_name": "Los Angeles County",
+        "state_fips": "06",
+        "image_count": 14
+      }
+    },
+    {
+      "timestamp": "2023-04-15T00:00:00",
+      "metrics": {
+        "obsolescence_score": 0.39,
+        "growth_potential_score": 0.7,
+        "bivariate_score": 0.273
+      },
+      "metadata": {
+        "county_name": "Los Angeles County",
+        "state_fips": "06",
+        "image_count": 12
+      }
+    },
+    {
+      "timestamp": "2023-05-15T00:00:00",
+      "metrics": {
+        "obsolescence_score": 0.37,
+        "growth_potential_score": 0.72,
+        "bivariate_score": 0.266
+      },
+      "metadata": {
+        "county_name": "Los Angeles County",
+        "state_fips": "06",
+        "image_count": 15
+      }
+    },
+    {
+      "timestamp": "2023-06-15T00:00:00",
+      "metrics": {
+        "obsolescence_score": 0.38,
+        "growth_potential_score": 0.73,
+        "bivariate_score": 0.277
+      },
+      "metadata": {
+        "county_name": "Los Angeles County",
+        "state_fips": "06",
+        "image_count": 13
+      }
+    },
+    {
+      "timestamp": "2023-07-15T00:00:00",
+      "metrics": {
+        "obsolescence_score": 0.40,
+        "growth_potential_score": 0.71,
+        "bivariate_score": 0.284
+      },
+      "metadata": {
+        "county_name": "Los Angeles County",
+        "state_fips": "06",
+        "image_count": 14
+      }
+    },
+    {
+      "timestamp": "2023-08-15T00:00:00",
+      "metrics": {
+        "obsolescence_score": 0.42,
+        "growth_potential_score": 0.69,
+        "bivariate_score": 0.290
+      },
+      "metadata": {
+        "county_name": "Los Angeles County",
+        "state_fips": "06",
+        "image_count": 16
+      }
+    },
+    {
+      "timestamp": "2023-09-15T00:00:00",
+      "metrics": {
+        "obsolescence_score": 0.41,
+        "growth_potential_score": 0.70,
+        "bivariate_score": 0.287
+      },
+      "metadata": {
+        "county_name": "Los Angeles County",
+        "state_fips": "06",
+        "image_count": 12
+      }
+    },
+    {
+      "timestamp": "2023-10-15T00:00:00",
+      "metrics": {
+        "obsolescence_score": 0.39,
+        "growth_potential_score": 0.72,
+        "bivariate_score": 0.281
+      },
+      "metadata": {
+        "county_name": "Los Angeles County",
+        "state_fips": "06",
+        "image_count": 13
+      }
+    },
+    {
+      "timestamp": "2023-11-15T00:00:00",
+      "metrics": {
+        "obsolescence_score": 0.40,
+        "growth_potential_score": 0.73,
+        "bivariate_score": 0.292
+      },
+      "metadata": {
+        "county_name": "Los Angeles County",
+        "state_fips": "06",
+        "image_count": 15
+      }
+    },
+    {
+      "timestamp": "2023-12-15T00:00:00",
+      "metrics": {
+        "obsolescence_score": 0.41,
+        "growth_potential_score": 0.74,
+        "bivariate_score": 0.303
+      },
+      "metadata": {
+        "county_name": "Los Angeles County",
+        "state_fips": "06",
+        "image_count": 14
+      }
+    }
+  ]
+} 

@@ -1,0 +1,26 @@
+# Satellite Data Collection Pipeline - Crontab Example
+# To use: crontab -e and paste appropriate lines
+# Make sure to update paths to match your environment
+
+# Environment setup
+SHELL=/bin/bash
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+PIPELINE_DIR=/path/to/satellite-pipeline
+PYTHON=/path/to/python
+
+# Daily data collection at 2:00 AM
+0 2 * * * cd $PIPELINE_DIR && $PYTHON scripts/collect_data.py --interval daily >> logs/daily_collection.log 2>&1
+
+# Weekly data collection (more counties) on Sunday at 3:00 AM
+0 3 * * 0 cd $PIPELINE_DIR && $PYTHON scripts/collect_data.py --interval weekly --all-counties >> logs/weekly_collection.log 2>&1
+
+# Monthly historical data backfill on the 1st of each month at 4:00 AM
+# Processes data for the previous month
+0 4 1 * * cd $PIPELINE_DIR && $PYTHON scripts/process_historical.py --start-date "$(date -d 'last month' +'%Y-%m-01')" --end-date "$(date +'%Y-%m-01')" --interval monthly --all-counties >> logs/monthly_historical.log 2>&1
+
+# Restart API and dashboard servers every day at 1:00 AM (in case they crashed)
+0 1 * * * cd $PIPELINE_DIR && ./run.sh all >> logs/restart_services.log 2>&1
+
+# Cleanup old raw data files every week on Saturday at 5:00 AM
+# Keeps only the last 3 months of raw data
+0 5 * * 6 find $PIPELINE_DIR/data/raw -type d -mtime +90 -exec rm -rf {} \; >> logs/cleanup.log 2>&1

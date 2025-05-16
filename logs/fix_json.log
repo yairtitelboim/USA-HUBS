@@ -1,0 +1,6 @@
+2025-05-09 08:47:35,036 - INFO - Attempting to fix JSON file: data/final/real_county_scores.geojson
+2025-05-09 08:47:35,080 - ERROR - JSON file is corrupted: Expecting ',' delimiter: line 55 column 107678 (char 4599808)
+2025-05-09 08:47:35,124 - INFO - Error at line 55, column 107678, position 4599808
+2025-05-09 08:47:35,126 - INFO - Error is near the end of the file, attempting to fix by completing the JSON structure
+2025-05-09 08:47:35,168 - ERROR - Error fixing JSON file: Expecting ',' delimiter: line 56 column 5 (char 4492693)
+2025-05-09 08:47:35,169 - ERROR - Failed to fix JSON file: data/final/real_county_scores.geojson

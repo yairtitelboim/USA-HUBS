@@ -1,0 +1,24 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "US West Region",
+        "region": "west"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-122.5, 37.5],
+            [-122.5, 38.5],
+            [-121.5, 38.5],
+            [-121.5, 37.5],
+            [-122.5, 37.5]
+          ]
+        ]
+      }
+    }
+  ]
+}

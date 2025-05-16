@@ -1,0 +1,1589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Logistics Hub Obsolescence Risk Analysis | 2027 Forecast</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      overflow: hidden;
+      background-color: #080808; /* Even darker background */
+      color: #e0e0e0;
+    }
+    #map {
+      width: 100vw;
+      height: 100vh;
+      background-color: #050505;
+    }
+    #status {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 5px 10px;
+      border-radius: 4px;
+      font-size: 12px;
+      z-index: 100;
+    }
+    #map-title {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 8px 15px;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: bold;
+      z-index: 100;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    #legend {
+      position: absolute;
+      bottom: 30px;
+      right: 15px;
+      padding: 8px;
+      background: rgba(30, 30, 30, 0.9);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+      border-radius: 6px;
+      border: 1px solid #333333;
+      z-index: 1;
+      max-width: 180px;
+      font-size: 11px;
+    }
+    .legend-grid {
+      display: grid;
+      grid-template-columns: 15px auto;
+      grid-gap: 4px 6px;
+      align-items: center;
+      margin: 5px 0;
+    }
+    .legend-color {
+      width: 15px;
+      height: 15px;
+      border-radius: 3px;
+      grid-column: 1;
+    }
+    .legend-text {
+      grid-column: 2;
+      line-height: 1.1;
+    }
+    .legend-value {
+      font-weight: bold;
+      font-size: 10px;
+    }
+    .legend-description {
+      font-size: 9px;
+      color: #cccccc;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .title {
+      text-align: center;
+      margin-bottom: 5px;
+      font-weight: bold;
+      font-size: 12px;
+      border-bottom: 1px solid #333333;
+      padding-bottom: 4px;
+    }
+    .legend-subtitle {
+      font-size: 9px;
+      color: #cccccc;
+      text-align: center;
+      margin-top: -3px;
+      margin-bottom: 5px;
+    }
+    .legend-footer {
+      font-size: 9px;
+      color: #cccccc;
+      text-align: center;
+      margin-top: 3px;
+      border-top: 1px solid #333;
+      padding-top: 3px;
+      line-height: 1.2;
+    }
+    /* Tooltip for legend descriptions */
+    .tooltip {
+      position: relative;
+      display: inline-block;
+      cursor: help;
+    }
+    .tooltip:hover .tooltip-text {
+      visibility: visible;
+      opacity: 1;
+    }
+    .tooltip-text {
+      visibility: hidden;
+      position: absolute;
+      width: 200px;
+      background-color: rgba(40, 40, 40, 0.95);
+      color: #fff;
+      text-align: left;
+      border-radius: 4px;
+      padding: 8px;
+      z-index: 1;
+      bottom: 125%;
+      left: 50%;
+      margin-left: -100px;
+      opacity: 0;
+      transition: opacity 0.3s;
+      font-size: 11px;
+      line-height: 1.3;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      pointer-events: none;
+    }
+    #loading {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    .spinner {
+      border: 5px solid #f3f3f3;
+      border-top: 5px solid #3498db;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 2s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    #toggle3D {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: 1;
+      padding: 10px;
+      background-color: #2196F3;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    /* Custom popup styles - Dark Mode */
+    .mapboxgl-popup {
+      max-width: 272px !important; /* Reduced by 15% from 320px */
+      z-index: 10;
+    }
+
+    /* Apply dark mode styles to all popups */
+    .mapboxgl-popup-content {
+      background: rgba(25, 25, 30, 0.95) !important;
+      color: #e0e0e0 !important;
+      border-radius: 7px !important;
+      padding: 13px !important;
+      box-shadow: 0 3px 13px rgba(0, 0, 0, 0.5) !important;
+      border: 1px solid rgba(70, 70, 90, 0.5) !important;
+    }
+
+    /* Additional styles for our custom class */
+    .dark-mode-popup .mapboxgl-popup-content {
+      /* Any additional styles specific to our class */
+    }
+
+    /* Fix popup tip colors for all directions */
+    .mapboxgl-popup-tip {
+      border-color: transparent !important; /* Reset all borders first */
+    }
+
+    /* Top anchors */
+    .mapboxgl-popup-anchor-top .mapboxgl-popup-tip,
+    .mapboxgl-popup-anchor-top-left .mapboxgl-popup-tip,
+    .mapboxgl-popup-anchor-top-right .mapboxgl-popup-tip {
+      border-bottom-color: rgba(25, 25, 30, 0.95) !important;
+    }
+
+    /* Bottom anchors */
+    .mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip,
+    .mapboxgl-popup-anchor-bottom-left .mapboxgl-popup-tip,
+    .mapboxgl-popup-anchor-bottom-right .mapboxgl-popup-tip {
+      border-top-color: rgba(25, 25, 30, 0.95) !important;
+    }
+
+    /* Left anchor */
+    .mapboxgl-popup-anchor-left .mapboxgl-popup-tip {
+      border-right-color: rgba(25, 25, 30, 0.95) !important;
+    }
+
+    /* Right anchor */
+    .mapboxgl-popup-anchor-right .mapboxgl-popup-tip {
+      border-left-color: rgba(25, 25, 30, 0.95) !important;
+    }
+
+    /* Debug styles - commented out for now
+    .dark-mode-popup::before {
+      content: '';
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      right: -5px;
+      bottom: -5px;
+      border: 2px solid red;
+      border-radius: 10px;
+      pointer-events: none;
+      z-index: -1;
+    } */
+    .mapboxgl-popup-close-button {
+      color: #999 !important;
+      font-size: 18px !important;
+      padding: 5px 8px !important;
+    }
+    .mapboxgl-popup-close-button:hover {
+      color: #fff !important;
+      background: none !important;
+    }
+
+    /* Popup content styles */
+    .popup-container {
+      font-family: 'Arial', sans-serif;
+    }
+    .popup-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(100, 100, 120, 0.5);
+    }
+    .popup-title {
+      flex-grow: 1;
+      font-size: 14px;
+      font-weight: bold;
+      color: #fff;
+    }
+    .popup-fips {
+      font-size: 11px;
+      color: #999;
+      background: rgba(60, 60, 80, 0.5);
+      padding: 3px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+    .popup-score-container {
+      margin-bottom: 12px;
+    }
+    .popup-score-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 6px;
+    }
+    .popup-score-icon {
+      margin-right: 6px;
+      color: #4dabf7;
+    }
+    .popup-score-title {
+      font-weight: bold;
+      font-size: 13px;
+      color: #e0e0e0;
+    }
+    .popup-score-value {
+      display: flex;
+      align-items: center;
+      background: rgba(40, 40, 50, 0.7);
+      padding: 8px 10px;
+      border-radius: 6px;
+    }
+    .popup-score-color {
+      width: 16px;
+      height: 16px;
+      border-radius: 3px;
+      margin-right: 8px;
+    }
+    .popup-score-number {
+      font-size: 16px;
+      font-weight: bold;
+      margin-right: 7px;
+      color: #fff;
+    }
+    .popup-score-category {
+      font-size: 11px;
+      color: #bbb;
+      background: rgba(60, 60, 80, 0.5);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .popup-metrics {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 7px;
+      margin-bottom: 10px;
+    }
+    .popup-metric {
+      background: rgba(40, 40, 50, 0.5);
+      padding: 6px 8px;
+      border-radius: 6px;
+    }
+    .popup-metric-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 3px;
+      font-size: 10px;
+      color: #999;
+    }
+    .popup-metric-icon {
+      margin-right: 4px;
+      font-size: 11px;
+    }
+    .popup-metric-value {
+      font-size: 13px;
+      font-weight: bold;
+      color: #e0e0e0;
+    }
+    .popup-footer {
+      display: flex;
+      align-items: center;
+      font-size: 10px;
+      color: #888;
+      margin-top: 8px;
+      padding-top: 6px;
+      border-top: 1px solid rgba(100, 100, 120, 0.3);
+    }
+    .popup-footer-icon {
+      margin-right: 5px;
+      color: #4dabf7;
+    }
+    .popup-risk-high {
+      color: #ff6b6b;
+      font-weight: bold;
+    }
+    .popup-risk-medium {
+      color: #ffd43b;
+      font-weight: bold;
+    }
+    .popup-risk-low {
+      color: #69db7c;
+      font-weight: bold;
+    }
+    .popup-logistics-info {
+      margin-top: 8px;
+      background: rgba(40, 40, 60, 0.6);
+      padding: 6px 8px;
+      border-radius: 5px;
+      font-size: 10px;
+      border-left: 3px solid #4dabf7;
+      color: #e0e0e0;
+      line-height: 1.3;
+    }
+
+    /* Minimal hover popup styles */
+    .minimal-popup .mapboxgl-popup-content {
+      background: rgba(25, 25, 30, 0.9) !important;
+      color: #fff !important;
+      border-radius: 4px !important;
+      padding: 6px 8px !important;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5) !important;
+      border: 1px solid rgba(70, 70, 90, 0.5) !important;
+    }
+
+    .minimal-popup-container {
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .minimal-popup-header {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .minimal-popup-title {
+      font-size: 12px;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .minimal-popup-score {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .minimal-popup-score-color {
+      width: 10px;
+      height: 10px;
+      border-radius: 2px;
+    }
+
+    .minimal-popup-score-value {
+      font-size: 12px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <div id="status">Loading...</div>
+  <div id="map-title">Logistics Hub Obsolescence Analysis - 2000+ Counties</div>
+  <div id="legend">
+    <div class="title">Logistics Hub Risk</div>
+    <div class="legend-subtitle">AI Ensemble Analysis</div>
+    <div class="legend-grid" id="legend-items"></div>
+    <div class="legend-footer">
+      3D height = obsolescence risk<br>
+      Based on 6-model AI ensemble
+    </div>
+  </div>
+
+  <button id="toggle3D" type="button">Switch to 2D View</button>
+  <button id="toggleMetric" type="button" style="position: absolute; top: 10px; left: 180px; z-index: 1; padding: 10px; background-color: #4CAF50; color: white; border: none; border-radius: 4px; cursor: pointer;">Switch to Growth Potential</button>
+  <div id="loading">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Load Mapbox GL JS -->
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
+
+  <!-- Load Turf.js -->
+  <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
+
+  <!-- Load Shapefile.js -->
+  <script src="https://unpkg.com/shapefile@0.6.6/dist/shapefile.js"></script>
+
+  <script>
+    // Wait for the page to fully load
+    window.addEventListener('load', function() {
+      // Show loading status
+      const statusEl = document.getElementById('status');
+      const loadingEl = document.getElementById('loading');
+      statusEl.style.display = 'block';
+      statusEl.textContent = 'Loading Mapbox and Turf.js...';
+
+      // Check if Mapbox and Turf are loaded
+      if (typeof mapboxgl === 'undefined') {
+        statusEl.textContent = 'Error: Mapbox GL JS not loaded';
+        statusEl.style.color = 'red';
+        loadingEl.style.display = 'none';
+        return;
+      }
+
+      if (typeof turf === 'undefined') {
+        statusEl.textContent = 'Error: Turf.js not loaded';
+        statusEl.style.color = 'red';
+        loadingEl.style.display = 'none';
+        return;
+      }
+
+      // Mapbox token
+      const MAPBOX_TOKEN = 'pk.eyJ1IjoieWFpcnRpdGVsIiwiYSI6ImNsZm1wODZuNzAyNmIzcHAydTRsaWlpOTIifQ.OG_0yvbvyo6gbqOJuP1Q3g';
+      mapboxgl.accessToken = MAPBOX_TOKEN;
+
+      // Color scales for different metrics
+      const obsolescenceColorScale = [
+        [0.0, [44, 123, 182]],  // Low (blue)
+        [0.2, [67, 162, 202]],  // Low-medium (light blue)
+        [0.4, [171, 217, 233]], // Medium-low (very light blue)
+        [0.5, [255, 255, 191]], // Medium (yellow)
+        [0.6, [254, 224, 139]], // Medium-high (light orange)
+        [0.8, [253, 174, 97]],  // High-medium (orange)
+        [1.0, [215, 25, 28]]    // High (red)
+      ];
+
+      // Color scale for growth potential (green to purple gradient)
+      const growthColorScale = [
+        [0.0, [26, 152, 80]],   // Low (green)
+        [0.2, [102, 189, 99]],  // Low-medium (light green)
+        [0.4, [166, 217, 106]], // Medium-low (very light green)
+        [0.5, [217, 217, 211]], // Medium (light gray)
+        [0.6, [231, 212, 232]], // Medium-high (light purple)
+        [0.8, [201, 148, 199]], // High-medium (medium purple)
+        [1.0, [145, 52, 146]]   // High (dark purple)
+      ];
+
+      // Current active color scale and metric
+      let currentColorScale = obsolescenceColorScale;
+      let currentMetric = 'obsolescence_score';
+      let currentMetricName = 'Obsolescence Risk';
+
+      // Function to interpolate colors based on score
+      function interpolateColor(value, isGrowth = false) {
+        // Choose the appropriate color scale
+        const scale = isGrowth ? growthColorScale : currentColorScale;
+
+        // Find the color range
+        let lowerIndex = 0;
+        for (let i = 1; i < scale.length; i++) {
+          if (value <= scale[i][0]) {
+            lowerIndex = i - 1;
+            break;
+          }
+        }
+
+        // Handle edge case where value is at the maximum
+        if (lowerIndex >= scale.length - 1) {
+          lowerIndex = scale.length - 2;
+        }
+
+        const lowerValue = scale[lowerIndex][0];
+        const upperValue = scale[lowerIndex + 1][0];
+        const lowerColor = scale[lowerIndex][1];
+        const upperColor = scale[lowerIndex + 1][1];
+
+        // Calculate interpolation factor
+        const range = upperValue - lowerValue;
+        const factor = range === 0 ? 0 : (value - lowerValue) / range;
+
+        // Interpolate RGB values
+        return [
+          Math.round(lowerColor[0] + factor * (upperColor[0] - lowerColor[0])),
+          Math.round(lowerColor[1] + factor * (upperColor[1] - lowerColor[1])),
+          Math.round(lowerColor[2] + factor * (upperColor[2] - lowerColor[2]))
+        ];
+      }
+
+      // Create compact legend for the map with tooltips
+      function createLegend() {
+        const legendItems = document.getElementById('legend-items');
+        legendItems.innerHTML = '';
+
+        // Update legend title
+        document.querySelector('#legend .title').textContent = currentMetricName;
+
+        // Define legend data based on current metric
+        let legendData;
+
+        if (currentMetric === 'obsolescence_score') {
+          legendData = [
+            {
+              value: 0.00,
+              label: "Low",
+              description: "Low obsolescence risk. Logistics hubs likely to maintain or increase value through 2027."
+            },
+            {
+              value: 0.20,
+              label: "Low-Med",
+              description: "Minor risk of underperformance. Minimal impact from supply chain shifts."
+            },
+            {
+              value: 0.40,
+              label: "Med-Low",
+              description: "Moderate-low risk. Some potential for minor disruptions."
+            },
+            {
+              value: 0.50,
+              label: "Medium",
+              description: "Moderate risk. May experience some disruption from tariffs and EV reshoring."
+            },
+            {
+              value: 0.60,
+              label: "Med-High",
+              description: "Moderate-high risk. Increased likelihood of supply chain adjustments."
+            },
+            {
+              value: 0.80,
+              label: "High-Med",
+              description: "Significant risk. Likely to experience major supply chain disruptions by 2027."
+            },
+            {
+              value: 1.00,
+              label: "High",
+              description: "Critical risk. Logistics hubs likely to become obsolete due to major supply chain shifts."
+            }
+          ];
+
+          // Update legend footer
+          document.querySelector('#legend .legend-footer').innerHTML = '3D height = obsolescence risk<br>Based on 6-model AI ensemble';
+        } else {
+          legendData = [
+            {
+              value: 0.00,
+              label: "Low",
+              description: "Low growth potential. Areas showing minimal development activity or economic expansion."
+            },
+            {
+              value: 0.20,
+              label: "Low-Med",
+              description: "Minor growth indicators. Some signs of development but limited in scope."
+            },
+            {
+              value: 0.40,
+              label: "Med-Low",
+              description: "Moderate-low growth. Emerging development patterns visible in satellite imagery."
+            },
+            {
+              value: 0.50,
+              label: "Medium",
+              description: "Moderate growth potential. Balanced mix of established and developing areas."
+            },
+            {
+              value: 0.60,
+              label: "Med-High",
+              description: "Moderate-high growth. Clear signs of active development and economic expansion."
+            },
+            {
+              value: 0.80,
+              label: "High-Med",
+              description: "Significant growth potential. Extensive development activity visible in satellite imagery."
+            },
+            {
+              value: 1.00,
+              label: "High",
+              description: "Exceptional growth potential. Areas undergoing rapid development and expansion."
+            }
+          ];
+
+          // Update legend footer
+          document.querySelector('#legend .legend-footer').innerHTML = '3D height = growth potential<br>Based on satellite indices';
+        }
+
+        // Create legend items in a grid layout
+        legendData.forEach(data => {
+          const color = interpolateColor(data.value);
+
+          // Create color box
+          const colorBox = document.createElement('div');
+          colorBox.className = 'legend-color';
+          colorBox.style.backgroundColor = `rgb(${color[0]}, ${color[1]}, ${color[2]})`;
+          legendItems.appendChild(colorBox);
+
+          // Create text container with tooltip
+          const textContainer = document.createElement('div');
+          textContainer.className = 'legend-text tooltip';
+
+          // Create value and label (more compact)
+          const valueText = document.createElement('div');
+          valueText.className = 'legend-value';
+          valueText.textContent = `${data.value.toFixed(2)} - ${data.label}`;
+
+          // Create tooltip with full description
+          const tooltip = document.createElement('span');
+          tooltip.className = 'tooltip-text';
+          tooltip.textContent = data.description;
+
+          textContainer.appendChild(valueText);
+          textContainer.appendChild(tooltip);
+          legendItems.appendChild(textContainer);
+        });
+      }
+
+      // Initialize the map with enhanced 3D visualization
+      const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/dark-v11', // Use the dark style as base
+        center: [-98.5795, 39.8283], // Center of the US
+        zoom: 3.0, // More zoomed out to show the entire US
+        pitch: 30, // Subtle pitch for a gentle 3D effect
+        bearing: 15, // Minimal rotation for better perspective
+        projection: {
+          name: 'albers', // Albers projection is good for US maps
+          center: [-98, 39], // Centered on the US
+          parallels: [25, 50] // More extreme parallels for fish-eye effect
+        },
+        light: {
+          anchor: 'viewport', // Light follows the viewport
+          color: '#ffffff',
+          intensity: 0.5 // Moderate light intensity
+        }
+      });
+
+      // We're using real data from the GeoJSON file, no need for random score generation
+
+      // Function to add map layers - Not needed anymore as we're adding layers directly
+      function addMapLayers() {
+        // This function is now empty as we're adding layers directly in the data loading section
+        // Keeping it for compatibility with any existing code that might call it
+      }
+
+      // Function to set up popup events for county data
+      function setupPopupEvents() {
+        // Create two popup instances - one for hover (minimal) and one for click (detailed)
+        const hoverPopup = new mapboxgl.Popup({
+          closeButton: false,
+          closeOnClick: false,
+          className: 'minimal-popup',
+          maxWidth: '180px'
+        });
+
+        const clickPopup = new mapboxgl.Popup({
+          closeButton: true,
+          closeOnClick: true,
+          className: 'dark-mode-popup',
+          maxWidth: '272px'
+        });
+
+        // Show minimal popup on hover for county fills (2D view)
+        map.on('mouseenter', 'county-fills', function(e) {
+          if (!e.features || e.features.length === 0) return;
+
+          map.getCanvas().style.cursor = 'pointer';
+
+          const feature = e.features[0];
+          const props = feature.properties;
+          const coordinates = e.lngLat;
+
+          // Create minimal popup content
+          const html = createMinimalPopupHTML(props);
+
+          // Remove any existing click popup
+          clickPopup.remove();
+
+          // Show the hover popup
+          hoverPopup.setLngLat(coordinates)
+            .setHTML(html)
+            .addTo(map);
+        });
+
+        // Hide hover popup on mouseleave for county fills
+        map.on('mouseleave', 'county-fills', function() {
+          map.getCanvas().style.cursor = '';
+          hoverPopup.remove();
+        });
+
+        // Show detailed popup on click for county fills
+        map.on('click', 'county-fills', function(e) {
+          if (!e.features || e.features.length === 0) return;
+
+          const feature = e.features[0];
+          const props = feature.properties;
+          const coordinates = e.lngLat;
+
+          // Create detailed popup content
+          const html = createDetailedPopupHTML(props);
+
+          // Remove hover popup
+          hoverPopup.remove();
+
+          // Show the click popup
+          clickPopup.setLngLat(coordinates)
+            .setHTML(html)
+            .addTo(map);
+        });
+
+        // Helper function to create minimal popup HTML
+        function createMinimalPopupHTML(props) {
+          const countyName = props.county_name || 'Unknown County';
+          const stateName = props.state_name || '';
+          const obsScore = props.obsolescence_score || 0;
+          const growthScore = props.growth_potential_score || 0;
+
+          // Determine which score to display based on current metric
+          const score = currentMetric === 'obsolescence_score' ? obsScore : growthScore;
+          const scoreLabel = currentMetric === 'obsolescence_score' ? 'Risk' : 'Growth';
+
+          // Get color for the score
+          const color = interpolateColor(score);
+          const colorStr = `rgb(${color[0]}, ${color[1]}, ${color[2]})`;
+
+          return `
+            <div class="minimal-popup-container">
+              <div class="minimal-popup-header">
+                <div class="minimal-popup-title">${countyName}${stateName ? ', ' + stateName : ''}</div>
+              </div>
+              <div class="minimal-popup-score">
+                <div class="minimal-popup-score-color" style="background-color: ${colorStr};"></div>
+                <div class="minimal-popup-score-value">${scoreLabel}: ${score.toFixed(2)}</div>
+              </div>
+            </div>
+          `;
+        }
+
+        // Helper function to create detailed popup HTML
+        function createDetailedPopupHTML(props) {
+          const countyName = props.county_name || 'Unknown County';
+          const stateName = props.state_name || '';
+          const fips = props.county_fips || '';
+          const obsScore = props.obsolescence_score || 0;
+          const growthScore = props.growth_potential_score || 0;
+          const confidence = props.confidence || 0;
+          const tileCount = props.tile_count || 0;
+
+          // Get color for the obsolescence score
+          const obsColor = interpolateColor(obsScore);
+          const obsColorStr = `rgb(${obsColor[0]}, ${obsColor[1]}, ${obsColor[2]})`;
+
+          // Get color for the growth potential score
+          const growthColor = interpolateColor(growthScore, true);
+          const growthColorStr = `rgb(${growthColor[0]}, ${growthColor[1]}, ${growthColor[2]})`;
+
+          // Get risk category
+          let riskCategory = '';
+          if (obsScore < 0.3) riskCategory = 'Low';
+          else if (obsScore < 0.6) riskCategory = 'Medium';
+          else riskCategory = 'High';
+
+          // Get growth category
+          let growthCategory = '';
+          if (growthScore < 0.3) growthCategory = 'Low';
+          else if (growthScore < 0.6) growthCategory = 'Medium';
+          else growthCategory = 'High';
+
+          return `
+            <div class="popup-container">
+              <div class="popup-header">
+                <div class="popup-title">${countyName}${stateName ? ', ' + stateName : ''}</div>
+                <div class="popup-fips">${fips}</div>
+              </div>
+
+              <div class="popup-score-container">
+                <div class="popup-score-header">
+                  <div class="popup-score-icon">📉</div>
+                  <div class="popup-score-title">Obsolescence Risk</div>
+                </div>
+                <div class="popup-score-value">
+                  <div class="popup-score-color" style="background-color: ${obsColorStr};"></div>
+                  <div class="popup-score-number">${obsScore.toFixed(2)}</div>
+                  <div class="popup-score-category">${riskCategory} Risk</div>
+                </div>
+              </div>
+
+              <div class="popup-score-container">
+                <div class="popup-score-header">
+                  <div class="popup-score-icon">📈</div>
+                  <div class="popup-score-title">Growth Potential</div>
+                </div>
+                <div class="popup-score-value">
+                  <div class="popup-score-color" style="background-color: ${growthColorStr};"></div>
+                  <div class="popup-score-number">${growthScore.toFixed(2)}</div>
+                  <div class="popup-score-category">${growthCategory} Growth</div>
+                </div>
+              </div>
+
+              <div class="popup-metrics">
+                <div class="popup-metric">
+                  <div class="popup-metric-header">
+                    <div class="popup-metric-icon">🔍</div>
+                    Confidence
+                  </div>
+                  <div class="popup-metric-value">${confidence.toFixed(2)}</div>
+                </div>
+                <div class="popup-metric">
+                  <div class="popup-metric-header">
+                    <div class="popup-metric-icon">🗺️</div>
+                    Tiles Analyzed
+                  </div>
+                  <div class="popup-metric-value">${tileCount}</div>
+                </div>
+                <div class="popup-metric">
+                  <div class="popup-metric-header">
+                    <div class="popup-metric-icon">📊</div>
+                    Data Source
+                  </div>
+                  <div class="popup-metric-value">Satellite</div>
+                </div>
+                <div class="popup-metric">
+                  <div class="popup-metric-header">
+                    <div class="popup-metric-icon">📅</div>
+                    Forecast Year
+                  </div>
+                  <div class="popup-metric-value">2025</div>
+                </div>
+              </div>
+
+              <div class="popup-logistics-info">
+                ${getLogisticsHubPrediction(obsScore)}
+              </div>
+            </div>
+          `;
+        }
+      }
+
+      // Wait for the map to load
+      map.on('load', function() {
+        // Set up light for enhanced 3D effect
+        map.setLight({
+          anchor: 'viewport',
+          color: '#ffffff',
+          intensity: 0.6,
+          position: [1.5, 180, 60]
+          // Removed shadows property as it's not supported in this version
+        });
+
+        // Create a simpler approach to focus on the USA
+        // Add a dark background layer instead of modifying the base layer
+        map.addLayer({
+          id: 'dark-background',
+          type: 'background',
+          paint: {
+            'background-color': '#000000'
+          }
+        }, 'land');
+
+        // Make water features a more vibrant deep blue
+        if (map.getLayer('water')) {
+          map.setPaintProperty('water', 'fill-color', '#0047ab');  // Cobalt blue color
+        }
+
+        // Add a dark overlay for the entire world (slightly less dark)
+        map.addLayer({
+          id: 'world-overlay',
+          type: 'background',
+          paint: {
+            'background-color': 'rgba(0, 0, 0, 0.75)'  // Reduced opacity for less darkness
+          }
+        });
+
+        // Process county data to create the visualization
+        // First, set up the status message
+        statusEl.textContent = 'Map loaded, loading county shapefile and data...';
+
+        // Step 1: Load the county scores data
+        statusEl.textContent = 'Loading county data (this may take a moment)...';
+
+        // Load the county scores data directly
+        statusEl.textContent = 'Fetching county data...';
+
+        // Use fetch to load the GeoJSON first to handle errors better
+        fetch('data/final/fixed_county_scores.geojson')
+          .then(response => {
+            if (!response.ok) {
+              throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+          })
+          .then(data => {
+            console.log(`Loaded county scores with ${data.features.length} features`);
+
+            // Add the source with the loaded data
+            map.addSource('counties', {
+              type: 'geojson',
+              data: data,
+              maxzoom: 12,
+              buffer: 128,
+              tolerance: 0.375
+            });
+
+            // Update status with county count
+            const countyCount = data.features.length;
+            statusEl.textContent = `Loaded ${countyCount} counties`;
+
+            // Update map title with county count
+            const mapTitleEl = document.getElementById('map-title');
+            mapTitleEl.textContent = `Logistics Hub Obsolescence Analysis - ${countyCount} Counties`;
+
+            // Add the layers now that the source is loaded
+            addCountyLayers();
+          })
+          .catch(error => {
+            console.error("Error loading county data:", error);
+            statusEl.textContent = `Error loading county data: ${error.message}`;
+            statusEl.style.color = 'red';
+
+            // Try a fallback approach - load directly as a source
+            try {
+              map.addSource('counties', {
+                type: 'geojson',
+                data: 'data/final/county_scores.geojson',
+                maxzoom: 12,
+                buffer: 128,
+                tolerance: 0.375
+              });
+            } catch (e) {
+              console.error("Fallback loading also failed:", e);
+            }
+          });
+
+        // Add layers once the map style is loaded
+        map.once('style.load', function() {
+          // Check if the source exists before adding layers
+          if (map.getSource('counties')) {
+            // Add layers that depend on the counties source
+            addCountyLayers();
+          } else {
+            // Wait for the source to be added
+            map.on('sourcedata', function(e) {
+              if (e.sourceId === 'counties' && e.isSourceLoaded && !map.getLayer('county-fills')) {
+                addCountyLayers();
+              }
+            });
+          }
+        });
+
+        // Function to add all county-related layers
+        function addCountyLayers() {
+          // Only add layers if they don't already exist
+          if (!map.getLayer('county-fills')) {
+            console.log("Adding county layers...");
+
+            // Add a fill layer for the counties
+            map.addLayer({
+              id: 'county-fills',
+              type: 'fill',
+              source: 'counties',
+              paint: {
+                'fill-color': [
+                  'interpolate',
+                  ['linear'],
+                  ['get', currentMetric],
+                  0.0, 'rgb(44, 123, 182)',
+                  0.2, 'rgb(67, 162, 202)',
+                  0.4, 'rgb(171, 217, 233)',
+                  0.5, 'rgb(255, 255, 191)',
+                  0.6, 'rgb(254, 224, 139)',
+                  0.8, 'rgb(253, 174, 97)',
+                  1.0, 'rgb(215, 25, 28)'
+                ],
+                'fill-opacity': 0.7
+              }
+            });
+
+            // Add a line layer for county boundaries with white lines
+            map.addLayer({
+              id: 'county-borders',
+              type: 'line',
+              source: 'counties',
+              paint: {
+                'line-color': 'white',
+                'line-width': 1,
+                'line-opacity': 0.9
+              }
+            });
+
+            // Add a 3D extrusion layer for counties
+            map.addLayer({
+              id: 'county-extrusions',
+              type: 'fill-extrusion',
+              source: 'counties',
+              paint: {
+                'fill-extrusion-color': [
+                  'interpolate',
+                  ['linear'],
+                  ['get', currentMetric],
+                  0.0, 'rgb(44, 123, 182)',
+                  0.2, 'rgb(67, 162, 202)',
+                  0.4, 'rgb(171, 217, 233)',
+                  0.5, 'rgb(255, 255, 191)',
+                  0.6, 'rgb(254, 224, 139)',
+                  0.8, 'rgb(253, 174, 97)',
+                  1.0, 'rgb(215, 25, 28)'
+                ],
+                'fill-extrusion-height': [
+                  '*',
+                  ['get', currentMetric],
+                  80000
+                ],
+                'fill-extrusion-base': 0,
+                'fill-extrusion-opacity': 1.0,
+                'fill-extrusion-vertical-gradient': true,
+                'fill-extrusion-ambient-occlusion-intensity': 0.5,
+                'fill-extrusion-ambient-occlusion-radius': 5
+              }
+            });
+
+            // Set up popup events after layers are added
+            setupPopupEvents();
+          }
+        }
+
+        // setupPopupEvents is now called inside addCountyLayers
+
+        // Create a popup for county information with dark mode class
+
+        // Add a MutationObserver to monitor when popups are added to the DOM
+        const observer = new MutationObserver(mutations => {
+          mutations.forEach(mutation => {
+            if (mutation.addedNodes.length) {
+              mutation.addedNodes.forEach(node => {
+                if (node.classList && node.classList.contains('mapboxgl-popup')) {
+                  // Force add our class if it's missing (without console logging)
+                  if (!node.classList.contains('dark-mode-popup')) {
+                    node.classList.add('dark-mode-popup');
+                  }
+                }
+              });
+            }
+          });
+        });
+
+        // Start observing the document body for added nodes
+        observer.observe(document.body, { childList: true, subtree: true });
+
+        // Create two popup instances - one for hover (minimal) and one for click (detailed)
+        const hoverPopup = new mapboxgl.Popup({
+          closeButton: false,
+          closeOnClick: false,
+          className: 'minimal-popup',
+          maxWidth: '180px'
+        });
+
+        const clickPopup = new mapboxgl.Popup({
+          closeButton: true,
+          closeOnClick: true,
+          className: 'dark-mode-popup'
+        });
+
+        // State FIPS to abbreviation mapping
+        const stateFipsToAbbr = {
+          '01': 'AL', '02': 'AK', '04': 'AZ', '05': 'AR', '06': 'CA',
+          '08': 'CO', '09': 'CT', '10': 'DE', '11': 'DC', '12': 'FL',
+          '13': 'GA', '15': 'HI', '16': 'ID', '17': 'IL', '18': 'IN',
+          '19': 'IA', '20': 'KS', '21': 'KY', '22': 'LA', '23': 'ME',
+          '24': 'MD', '25': 'MA', '26': 'MI', '27': 'MN', '28': 'MS',
+          '29': 'MO', '30': 'MT', '31': 'NE', '32': 'NV', '33': 'NH',
+          '34': 'NJ', '35': 'NM', '36': 'NY', '37': 'NC', '38': 'ND',
+          '39': 'OH', '40': 'OK', '41': 'OR', '42': 'PA', '44': 'RI',
+          '45': 'SC', '46': 'SD', '47': 'TN', '48': 'TX', '49': 'UT',
+          '50': 'VT', '51': 'VA', '53': 'WA', '54': 'WV', '55': 'WI',
+          '56': 'WY', '72': 'PR'
+        };
+
+        // Function to get state abbreviation from FIPS code
+        const getStateAbbr = (stateFips) => {
+          if (!stateFips) return '';
+          return stateFipsToAbbr[stateFips] || '';
+        };
+
+        // Helper functions for both popups
+        const getObsolescenceCategory = (score) => {
+          if (score <= 0.2) return "Low";
+          if (score <= 0.4) return "Low-Medium";
+          if (score <= 0.5) return "Medium-Low";
+          if (score <= 0.6) return "Medium";
+          if (score <= 0.8) return "Medium-High";
+          if (score <= 0.9) return "High-Medium";
+          return "High";
+        };
+
+        const getScoreColor = (score) => {
+          const color = interpolateColor(score);
+          return `rgb(${color[0]}, ${color[1]}, ${color[2]})`;
+        };
+
+        const getRiskLevel = (score) => {
+          if (score >= 0.7) return { level: "High", class: "popup-risk-high" };
+          if (score >= 0.4) return { level: "Medium", class: "popup-risk-medium" };
+          return { level: "Low", class: "popup-risk-low" };
+        };
+
+        const getLogisticsHubPrediction = (score) => {
+          if (score >= 0.7) {
+            return "High risk of logistics hub obsolescence by 2027. Consider reassessment of infrastructure investments.";
+          } else if (score >= 0.4) {
+            return "Moderate risk of logistics hub underperformance. Monitor for supply chain shifts.";
+          } else {
+            return "Low obsolescence risk. Potential for logistics hub growth and investment.";
+          }
+        };
+
+        // Function to create detailed popup HTML
+        const createDetailedPopupHTML = (props) => {
+          // Obsolescence score
+          const obsScore = props.obsolescence_score ? parseFloat(props.obsolescence_score) : null;
+          const obsScoreCategory = obsScore !== null ? getObsolescenceCategory(obsScore) : 'N/A';
+          const obsScoreColor = obsScore !== null ? getScoreColor(obsScore) : '#999';
+          const risk = obsScore !== null ? getRiskLevel(obsScore) : { level: "Unknown", class: "" };
+
+          // Growth potential score
+          const growthScore = props.growth_potential_score ? parseFloat(props.growth_potential_score) : null;
+          const growthScoreCategory = growthScore !== null ? getObsolescenceCategory(growthScore) : 'N/A';
+          const growthScoreColor = growthScore !== null ?
+            `rgb(${Math.round(26 + (growthScore * 119))}, ${Math.round(152 - (growthScore * 100))}, ${Math.round(80 + (growthScore * 66))})` :
+            '#999';
+
+          const stateFips = props.state_fips || props.STATEFP || '';
+          const stateAbbr = getStateAbbr(stateFips);
+
+          return `
+            <div class="popup-container">
+              <div class="popup-header">
+                <div class="popup-title">${props.county_name || props.NAME || props.name || 'County'}, ${stateAbbr}</div>
+                <div class="popup-fips">${props.county_fips || props.GEOID || props.FIPS || props.fips || 'N/A'}</div>
+              </div>
+
+              <div class="popup-score-container">
+                <div class="popup-score-header">
+                  <div class="popup-score-icon">📊</div>
+                  <div class="popup-score-title">Obsolescence Score</div>
+                </div>
+                <div class="popup-score-value">
+                  <div class="popup-score-color" style="background-color: ${obsScoreColor};"></div>
+                  <div class="popup-score-number">${obsScore !== null ? obsScore.toFixed(2) : 'N/A'}</div>
+                  <div class="popup-score-category">${obsScoreCategory}</div>
+                </div>
+              </div>
+
+              <div class="popup-score-container">
+                <div class="popup-score-header">
+                  <div class="popup-score-icon">📈</div>
+                  <div class="popup-score-title">Growth Potential</div>
+                </div>
+                <div class="popup-score-value">
+                  <div class="popup-score-color" style="background-color: ${growthScoreColor};"></div>
+                  <div class="popup-score-number">${growthScore !== null ? growthScore.toFixed(2) : 'N/A'}</div>
+                  <div class="popup-score-category">${growthScoreCategory}</div>
+                </div>
+              </div>
+
+              <div class="popup-metrics">
+                <div class="popup-metric">
+                  <div class="popup-metric-header">
+                    <div class="popup-metric-icon">🛰️</div>
+                    <div>Satellite Tiles</div>
+                  </div>
+                  <div class="popup-metric-value">${props.tile_count || 'N/A'}</div>
+                </div>
+                <div class="popup-metric">
+                  <div class="popup-metric-header">
+                    <div class="popup-metric-icon">✓</div>
+                    <div>Confidence</div>
+                  </div>
+                  <div class="popup-metric-value">${props.confidence ? parseFloat(props.confidence).toFixed(2) : 'N/A'}</div>
+                </div>
+              </div>
+
+              <div class="popup-metrics">
+                <div class="popup-metric">
+                  <div class="popup-metric-header">
+                    <div class="popup-metric-icon">⚠️</div>
+                    <div>Risk Level</div>
+                  </div>
+                  <div class="popup-metric-value ${risk.class}">${risk.level}</div>
+                </div>
+                <div class="popup-metric">
+                  <div class="popup-metric-header">
+                    <div class="popup-metric-icon">📆</div>
+                    <div>Analysis Date</div>
+                  </div>
+                  <div class="popup-metric-value">2025</div>
+                </div>
+              </div>
+
+              <div class="popup-logistics-info">
+                ${getLogisticsHubPrediction(obsScore)}
+              </div>
+            </div>
+          `;
+        };
+
+        // Function to create minimal popup HTML for hover
+        const createMinimalPopupHTML = (props) => {
+          // Get the appropriate score based on current metric
+          const score = props[currentMetric] ? parseFloat(props[currentMetric]) : null;
+          const scoreColor = score !== null ? getScoreColor(score) : '#999';
+          const stateFips = props.state_fips || props.STATEFP || '';
+          const stateAbbr = getStateAbbr(stateFips);
+
+          // Get the metric name for display
+          const metricLabel = currentMetric === 'obsolescence_score' ? 'Obsolescence' : 'Growth Potential';
+
+          return `
+            <div class="minimal-popup-container">
+              <div class="minimal-popup-header">
+                <div class="minimal-popup-title">${props.county_name || props.NAME || props.name || 'County'}, ${stateAbbr}</div>
+              </div>
+              <div class="minimal-popup-score">
+                <div class="minimal-popup-score-color" style="background-color: ${scoreColor};"></div>
+                <div class="minimal-popup-score-value">${metricLabel}: ${score !== null ? score.toFixed(2) : 'N/A'}</div>
+              </div>
+            </div>
+          `;
+        };
+
+        // Show minimal popup on hover for county extrusions
+        map.on('mouseenter', 'county-extrusions', function(e) {
+          if (!e.features || e.features.length === 0) return;
+
+          map.getCanvas().style.cursor = 'pointer';
+
+          const feature = e.features[0];
+          const props = feature.properties;
+          const coordinates = e.lngLat;
+
+          // Create minimal popup content
+          const html = createMinimalPopupHTML(props);
+
+          // Remove any existing click popup
+          clickPopup.remove();
+
+          // Show the hover popup
+          hoverPopup.setLngLat(coordinates)
+            .setHTML(html)
+            .addTo(map);
+        });
+
+        // Hide hover popup on mouseleave for county extrusions
+        map.on('mouseleave', 'county-extrusions', function() {
+          map.getCanvas().style.cursor = '';
+          hoverPopup.remove();
+        });
+
+        // Show detailed popup on click for county extrusions
+        map.on('click', 'county-extrusions', function(e) {
+          if (!e.features || e.features.length === 0) return;
+
+          const feature = e.features[0];
+          const props = feature.properties;
+          const coordinates = e.lngLat;
+
+          // Create detailed popup content
+          const html = createDetailedPopupHTML(props);
+
+          // Remove hover popup
+          hoverPopup.remove();
+
+          // Show the click popup
+          clickPopup.setLngLat(coordinates)
+            .setHTML(html)
+            .addTo(map);
+        });
+
+        // Show minimal popup on hover for county fills (2D view)
+        map.on('mouseenter', 'county-fills', function(e) {
+          if (!e.features || e.features.length === 0) return;
+
+          map.getCanvas().style.cursor = 'pointer';
+
+          const feature = e.features[0];
+          const props = feature.properties;
+          const coordinates = e.lngLat;
+
+          // Create minimal popup content
+          const html = createMinimalPopupHTML(props);
+
+          // Remove any existing click popup
+          clickPopup.remove();
+
+          // Show the hover popup
+          hoverPopup.setLngLat(coordinates)
+            .setHTML(html)
+            .addTo(map);
+        });
+
+        // Hide hover popup on mouseleave for county fills
+        map.on('mouseleave', 'county-fills', function() {
+          map.getCanvas().style.cursor = '';
+          hoverPopup.remove();
+        });
+
+        // Show detailed popup on click for county fills
+        map.on('click', 'county-fills', function(e) {
+          if (!e.features || e.features.length === 0) return;
+
+          const feature = e.features[0];
+          const props = feature.properties;
+          const coordinates = e.lngLat;
+
+          // Create detailed popup content
+          const html = createDetailedPopupHTML(props);
+
+          // Remove hover popup
+          hoverPopup.remove();
+
+          // Show the click popup
+          clickPopup.setLngLat(coordinates)
+            .setHTML(html)
+            .addTo(map);
+        });
+
+        // Create legend
+        createLegend();
+
+        // Add major city labels like in the example image
+        const majorCities = [
+          { name: 'Seattle', coordinates: [-122.3321, 47.6062] },
+          { name: 'San Francisco', coordinates: [-122.4194, 37.7749] },
+          { name: 'Los Angeles', coordinates: [-118.2437, 34.0522] },
+          { name: 'San Diego', coordinates: [-117.1611, 32.7157] },
+          { name: 'Phoenix', coordinates: [-112.0740, 33.4484] },
+          { name: 'Denver', coordinates: [-104.9903, 39.7392] },
+          { name: 'Dallas', coordinates: [-96.7970, 32.7767] },
+          { name: 'Houston', coordinates: [-95.3698, 29.7604] },
+          { name: 'Chicago', coordinates: [-87.6298, 41.8781] },
+          { name: 'Minneapolis', coordinates: [-93.2650, 44.9778] },
+          { name: 'Detroit', coordinates: [-83.0458, 42.3314] },
+          { name: 'Atlanta', coordinates: [-84.3880, 33.7490] },
+          { name: 'Miami', coordinates: [-80.1918, 25.7617] },
+          { name: 'Washington DC', coordinates: [-77.0369, 38.9072] },
+          { name: 'New York', coordinates: [-74.0060, 40.7128] },
+          { name: 'Boston', coordinates: [-71.0589, 42.3601] }
+        ];
+
+        // Add city markers and labels
+        majorCities.forEach(city => {
+          // Create a DOM element for the marker with enhanced visibility
+          const el = document.createElement('div');
+          el.className = 'city-marker';
+          el.style.color = 'rgba(220,220,220,0.7)'; // Desaturated color
+          el.style.fontSize = '12px';
+          el.style.fontWeight = 'bold';
+          el.style.textShadow = '0px 0px 8px rgba(0,0,0,0.9), 0px 0px 3px rgba(0,0,0,0.7)';
+          el.style.whiteSpace = 'nowrap';
+          el.style.opacity = '0.8'; // Slightly transparent
+          el.innerHTML = `
+            <div style="position: relative;">
+              <div style="position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 1px; height: 40px; background: rgba(180,180,180,0.5);"></div>
+              <div style="position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);">${city.name}</div>
+            </div>
+          `;
+
+          // Add marker to map
+          new mapboxgl.Marker({
+            element: el,
+            anchor: 'bottom',
+            offset: [0, 0]
+          })
+            .setLngLat(city.coordinates)
+            .addTo(map);
+        });
+
+        // Add navigation controls with passive event listeners
+        class PassiveNavigationControl extends mapboxgl.NavigationControl {
+          onAdd(map) {
+            const container = super.onAdd(map);
+            // Find all elements with touchmove event listeners and make them passive
+            const elements = container.querySelectorAll('*');
+            elements.forEach(el => {
+              el.addEventListener('touchmove', function(e) {}, { passive: true });
+            });
+            return container;
+          }
+        }
+
+        const nav = new PassiveNavigationControl();
+        map.addControl(nav, 'top-right');
+
+        // Toggle 3D view on button click
+        let is3DView = true; // Start with 3D view
+        document.getElementById('toggle3D').addEventListener('click', function() {
+          is3DView = !is3DView;
+
+          if (is3DView) {
+            map.easeTo({
+              pitch: 30, // Subtle pitch for a gentle 3D effect
+              bearing: 15, // Minimal rotation for better perspective
+              duration: 1000
+            });
+
+            // Show the 3D layer if it exists
+            if (map.getLayer('county-extrusions')) {
+              map.setLayoutProperty('county-extrusions', 'visibility', 'visible');
+            }
+
+            // Hide the 2D fill layer if it exists
+            if (map.getLayer('county-fills')) {
+              map.setLayoutProperty('county-fills', 'visibility', 'none');
+            }
+
+            // Update button text
+            document.getElementById('toggle3D').textContent = 'Switch to 2D View';
+
+          } else {
+            map.easeTo({
+              pitch: 0,
+              bearing: 0,
+              duration: 1000
+            });
+
+            // Hide the 3D layer if it exists
+            if (map.getLayer('county-extrusions')) {
+              map.setLayoutProperty('county-extrusions', 'visibility', 'none');
+            }
+
+            // Show the 2D fill layer if it exists
+            if (map.getLayer('county-fills')) {
+              map.setLayoutProperty('county-fills', 'visibility', 'visible');
+            }
+
+            // Update button text
+            document.getElementById('toggle3D').textContent = 'Switch to 3D View';
+          }
+        });
+
+        // Toggle between obsolescence and growth potential metrics
+        document.getElementById('toggleMetric').addEventListener('click', function() {
+          // Toggle the current metric
+          if (currentMetric === 'obsolescence_score') {
+            currentMetric = 'growth_potential_score';
+            currentMetricName = 'Growth Potential';
+            currentColorScale = growthColorScale;
+            this.textContent = 'Switch to Obsolescence Risk';
+            this.style.backgroundColor = '#4CAF50'; // Green for growth
+
+            // Update map title
+            const mapTitleEl = document.getElementById('map-title');
+            const countyCount = mapTitleEl.textContent.match(/\d+/)[0];
+            mapTitleEl.textContent = `Logistics Hub Growth Potential - ${countyCount} Counties`;
+          } else {
+            currentMetric = 'obsolescence_score';
+            currentMetricName = 'Obsolescence Risk';
+            currentColorScale = obsolescenceColorScale;
+            this.textContent = 'Switch to Growth Potential';
+            this.style.backgroundColor = '#f44336'; // Red for obsolescence
+
+            // Update map title
+            const mapTitleEl = document.getElementById('map-title');
+            const countyCount = mapTitleEl.textContent.match(/\d+/)[0];
+            mapTitleEl.textContent = `Logistics Hub Obsolescence Analysis - ${countyCount} Counties`;
+          }
+
+          // Update the legend
+          createLegend();
+
+          // Update the fill layer
+          if (map.getLayer('county-fills')) {
+            // For direct GeoJSON source, we can use a simpler approach
+            const colorExpression = [
+              'interpolate',
+              ['linear'],
+              ['get', currentMetric],
+              0.0, 'rgb(44, 123, 182)',
+              0.2, 'rgb(67, 162, 202)',
+              0.4, 'rgb(171, 217, 233)',
+              0.5, 'rgb(255, 255, 191)',
+              0.6, 'rgb(254, 224, 139)',
+              0.8, 'rgb(253, 174, 97)',
+              1.0, 'rgb(215, 25, 28)'
+            ];
+
+            map.setPaintProperty('county-fills', 'fill-color', colorExpression);
+          }
+
+          // Update the extrusion layer
+          if (map.getLayer('county-extrusions')) {
+            // For direct GeoJSON source, we can use a simpler approach
+            const colorExpression = [
+              'interpolate',
+              ['linear'],
+              ['get', currentMetric],
+              0.0, 'rgb(44, 123, 182)',
+              0.2, 'rgb(67, 162, 202)',
+              0.4, 'rgb(171, 217, 233)',
+              0.5, 'rgb(255, 255, 191)',
+              0.6, 'rgb(254, 224, 139)',
+              0.8, 'rgb(253, 174, 97)',
+              1.0, 'rgb(215, 25, 28)'
+            ];
+
+            const heightExpression = [
+              '*',
+              ['get', currentMetric],
+              80000
+            ];
+
+            map.setPaintProperty('county-extrusions', 'fill-extrusion-color', colorExpression);
+            map.setPaintProperty('county-extrusions', 'fill-extrusion-height', heightExpression);
+          }
+        });
+
+        // Update status and hide loading screen
+        statusEl.textContent = 'Map loaded successfully';
+        statusEl.style.color = 'green';
+        loadingEl.style.display = 'none';
+
+        // Hide status after 2 seconds
+        setTimeout(() => {
+          statusEl.style.display = 'none';
+        }, 2000);
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+2025-05-13 14:52:56,363 - collect_data - INFO - Processing 3 counties: 06037, 48113, 17031
+2025-05-13 14:52:56,364 - collect_data - INFO - Date range: 2025-05-06 to 2025-05-13
+2025-05-13 14:52:56,364 - gee_collector - INFO - Initializing Earth Engine...
+2025-05-13 14:52:57,168 - googleapiclient.http - WARNING - Encountered 403 Forbidden with reason "PERMISSION_DENIED"
+2025-05-13 14:52:57,169 - gee_collector - ERROR - Error initializing Earth Engine: Not signed up for Earth Engine or project is not registered. Visit https://developers.google.com/earth-engine/guides/access
+2025-05-13 14:52:57,169 - gee_collector - ERROR - Please make sure your Google Earth Engine credentials are properly set up.
+2025-05-13 14:52:57,170 - gee_collector - ERROR - You can authenticate using the earthengine command line tool:
+2025-05-13 14:52:57,170 - gee_collector - ERROR -   earthengine authenticate
+2025-05-13 14:52:57,170 - collect_data - INFO - Starting data collection...
+2025-05-13 14:52:57,170 - collect_data - INFO - Collecting data for county 06037
+2025-05-13 14:52:57,170 - gee_collector - INFO - Initializing Earth Engine...
+2025-05-13 14:52:57,699 - googleapiclient.http - WARNING - Encountered 403 Forbidden with reason "PERMISSION_DENIED"
+2025-05-13 14:52:57,699 - gee_collector - ERROR - Error initializing Earth Engine: Not signed up for Earth Engine or project is not registered. Visit https://developers.google.com/earth-engine/guides/access
+2025-05-13 14:52:57,699 - gee_collector - ERROR - Please make sure your Google Earth Engine credentials are properly set up.
+2025-05-13 14:52:57,699 - gee_collector - ERROR - You can authenticate using the earthengine command line tool:
+2025-05-13 14:52:57,699 - gee_collector - ERROR -   earthengine authenticate
+2025-05-13 14:52:57,700 - gee_collector - ERROR - Earth Engine not initialized. Cannot collect data.
+2025-05-13 14:52:57,700 - collect_data - WARNING - No data collected for county 06037
+2025-05-13 14:52:57,700 - collect_data - INFO - Collecting data for county 48113
+2025-05-13 14:52:57,700 - gee_collector - INFO - Initializing Earth Engine...
+2025-05-13 14:52:58,194 - googleapiclient.http - WARNING - Encountered 403 Forbidden with reason "PERMISSION_DENIED"
+2025-05-13 14:52:58,194 - gee_collector - ERROR - Error initializing Earth Engine: Not signed up for Earth Engine or project is not registered. Visit https://developers.google.com/earth-engine/guides/access
+2025-05-13 14:52:58,194 - gee_collector - ERROR - Please make sure your Google Earth Engine credentials are properly set up.
+2025-05-13 14:52:58,194 - gee_collector - ERROR - You can authenticate using the earthengine command line tool:
+2025-05-13 14:52:58,194 - gee_collector - ERROR -   earthengine authenticate
+2025-05-13 14:52:58,195 - gee_collector - ERROR - Earth Engine not initialized. Cannot collect data.
+2025-05-13 14:52:58,195 - collect_data - WARNING - No data collected for county 48113
+2025-05-13 14:52:58,195 - collect_data - INFO - Collecting data for county 17031
+2025-05-13 14:52:58,195 - gee_collector - INFO - Initializing Earth Engine...
+2025-05-13 14:52:58,711 - googleapiclient.http - WARNING - Encountered 403 Forbidden with reason "PERMISSION_DENIED"
+2025-05-13 14:52:58,711 - gee_collector - ERROR - Error initializing Earth Engine: Not signed up for Earth Engine or project is not registered. Visit https://developers.google.com/earth-engine/guides/access
+2025-05-13 14:52:58,711 - gee_collector - ERROR - Please make sure your Google Earth Engine credentials are properly set up.
+2025-05-13 14:52:58,711 - gee_collector - ERROR - You can authenticate using the earthengine command line tool:
+2025-05-13 14:52:58,711 - gee_collector - ERROR -   earthengine authenticate
+2025-05-13 14:52:58,711 - gee_collector - ERROR - Earth Engine not initialized. Cannot collect data.
+2025-05-13 14:52:58,712 - collect_data - WARNING - No data collected for county 17031
+2025-05-13 14:52:58,712 - collect_data - INFO - Starting data processing...
+2025-05-13 14:52:58,712 - collect_data - INFO - Collection run completed
+2025-05-13 14:53:56,123 - collect_data - INFO - Processing 3 counties: 06037, 48113, 17031
+2025-05-13 14:53:56,123 - collect_data - INFO - Date range: 2024-01-01 to 2024-03-31
+2025-05-13 14:53:56,123 - gee_collector - INFO - Initializing Earth Engine...
+2025-05-13 14:53:56,655 - googleapiclient.http - WARNING - Encountered 403 Forbidden with reason "PERMISSION_DENIED"
+2025-05-13 14:53:56,656 - gee_collector - ERROR - Error initializing Earth Engine: Not signed up for Earth Engine or project is not registered. Visit https://developers.google.com/earth-engine/guides/access
+2025-05-13 14:53:56,656 - gee_collector - ERROR - Please make sure your Google Earth Engine credentials are properly set up.
+2025-05-13 14:53:56,656 - gee_collector - ERROR - You can authenticate using the earthengine command line tool:
+2025-05-13 14:53:56,656 - gee_collector - ERROR -   earthengine authenticate
+2025-05-13 14:53:56,657 - collect_data - INFO - Starting data collection...
+2025-05-13 14:53:56,657 - collect_data - INFO - Collecting data for county 06037
+2025-05-13 14:53:56,657 - gee_collector - INFO - Initializing Earth Engine...
+2025-05-13 14:53:57,091 - googleapiclient.http - WARNING - Encountered 403 Forbidden with reason "PERMISSION_DENIED"
+2025-05-13 14:53:57,091 - gee_collector - ERROR - Error initializing Earth Engine: Not signed up for Earth Engine or project is not registered. Visit https://developers.google.com/earth-engine/guides/access
+2025-05-13 14:53:57,091 - gee_collector - ERROR - Please make sure your Google Earth Engine credentials are properly set up.
+2025-05-13 14:53:57,091 - gee_collector - ERROR - You can authenticate using the earthengine command line tool:
+2025-05-13 14:53:57,091 - gee_collector - ERROR -   earthengine authenticate
+2025-05-13 14:53:57,092 - gee_collector - ERROR - Earth Engine not initialized. Cannot collect data.
+2025-05-13 14:53:57,092 - collect_data - WARNING - No data collected for county 06037
+2025-05-13 14:53:57,092 - collect_data - INFO - Collecting data for county 48113
+2025-05-13 14:53:57,092 - gee_collector - INFO - Initializing Earth Engine...
+2025-05-13 14:53:57,559 - googleapiclient.http - WARNING - Encountered 403 Forbidden with reason "PERMISSION_DENIED"
+2025-05-13 14:53:57,559 - gee_collector - ERROR - Error initializing Earth Engine: Not signed up for Earth Engine or project is not registered. Visit https://developers.google.com/earth-engine/guides/access
+2025-05-13 14:53:57,559 - gee_collector - ERROR - Please make sure your Google Earth Engine credentials are properly set up.
+2025-05-13 14:53:57,559 - gee_collector - ERROR - You can authenticate using the earthengine command line tool:
+2025-05-13 14:53:57,559 - gee_collector - ERROR -   earthengine authenticate
+2025-05-13 14:53:57,559 - gee_collector - ERROR - Earth Engine not initialized. Cannot collect data.
+2025-05-13 14:53:57,559 - collect_data - WARNING - No data collected for county 48113
+2025-05-13 14:53:57,559 - collect_data - INFO - Collecting data for county 17031
+2025-05-13 14:53:57,559 - gee_collector - INFO - Initializing Earth Engine...
+2025-05-13 14:53:57,999 - googleapiclient.http - WARNING - Encountered 403 Forbidden with reason "PERMISSION_DENIED"
+2025-05-13 14:53:58,000 - gee_collector - ERROR - Error initializing Earth Engine: Not signed up for Earth Engine or project is not registered. Visit https://developers.google.com/earth-engine/guides/access
+2025-05-13 14:53:58,000 - gee_collector - ERROR - Please make sure your Google Earth Engine credentials are properly set up.
+2025-05-13 14:53:58,000 - gee_collector - ERROR - You can authenticate using the earthengine command line tool:
+2025-05-13 14:53:58,000 - gee_collector - ERROR -   earthengine authenticate
+2025-05-13 14:53:58,000 - gee_collector - ERROR - Earth Engine not initialized. Cannot collect data.
+2025-05-13 14:53:58,000 - collect_data - WARNING - No data collected for county 17031
+2025-05-13 14:53:58,000 - collect_data - INFO - Starting data processing...
+2025-05-13 14:53:58,000 - collect_data - INFO - Collection run completed

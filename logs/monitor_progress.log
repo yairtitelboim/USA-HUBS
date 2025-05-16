@@ -1,0 +1,902 @@
+2025-05-08 12:05:15,666 - INFO - Starting monitoring of data/final/real_county_scores.geojson
+2025-05-08 12:05:15,666 - INFO - Target count: 1000 counties
+2025-05-08 12:05:15,666 - INFO - Check interval: 60 seconds
+2025-05-08 12:05:15,856 - INFO - Current progress: 137/1000 counties (13.7%)
+2025-05-08 12:05:15,856 - INFO - Average score: 0.29, Range: 0.00-0.94, Median: 0.25
+2025-05-08 12:05:15,857 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 12:05:15,857 - INFO - Waiting 60 seconds for next check...
+2025-05-08 12:06:16,035 - INFO - Current progress: 146/1000 counties (14.6%)
+2025-05-08 12:06:16,035 - INFO - Average score: 0.28, Range: 0.00-0.94, Median: 0.24
+2025-05-08 12:06:16,036 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 12:06:16,037 - INFO - Waiting 60 seconds for next check...
+2025-05-08 12:07:16,250 - INFO - Current progress: 149/1000 counties (14.9%)
+2025-05-08 12:07:16,251 - INFO - Average score: 0.28, Range: 0.00-0.94, Median: 0.24
+2025-05-08 12:07:16,252 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 12:07:16,252 - INFO - Waiting 60 seconds for next check...
+2025-05-08 12:08:16,413 - ERROR - Error getting current progress: Expecting ',' delimiter: line 140 column 63424 (char 13828096)
+2025-05-08 12:08:16,414 - INFO - Waiting 60 seconds for next check...
+2025-05-08 12:09:16,625 - INFO - Current progress: 161/1000 counties (16.1%)
+2025-05-08 12:09:16,626 - INFO - Average score: 0.27, Range: 0.00-0.94, Median: 0.24
+2025-05-08 12:09:16,628 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 12:09:16,628 - INFO - Waiting 60 seconds for next check...
+2025-05-08 12:10:16,837 - INFO - Current progress: 166/1000 counties (16.6%)
+2025-05-08 12:10:16,838 - INFO - Average score: 0.28, Range: 0.00-1.00, Median: 0.24
+2025-05-08 12:10:16,839 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 12:10:16,839 - INFO - Waiting 60 seconds for next check...
+2025-05-08 12:11:17,043 - INFO - Current progress: 175/1000 counties (17.5%)
+2025-05-08 12:11:17,043 - INFO - Average score: 0.27, Range: 0.00-1.00, Median: 0.24
+2025-05-08 12:11:17,045 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 12:11:17,045 - INFO - Waiting 60 seconds for next check...
+2025-05-08 12:12:17,265 - INFO - Current progress: 183/1000 counties (18.3%)
+2025-05-08 12:12:17,266 - INFO - Average score: 0.27, Range: 0.00-1.00, Median: 0.23
+2025-05-08 12:12:17,266 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 12:12:17,266 - INFO - Waiting 60 seconds for next check...
+2025-05-08 12:13:17,273 - ERROR - Error getting current progress: Expecting value: line 8 column 23107 (char 188416)
+2025-05-08 12:13:17,274 - INFO - Waiting 60 seconds for next check...
+2025-05-08 12:14:17,494 - INFO - Current progress: 195/1000 counties (19.5%)
+2025-05-08 12:14:17,494 - INFO - Average score: 0.26, Range: 0.00-1.00, Median: 0.23
+2025-05-08 12:14:17,496 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 12:14:17,496 - INFO - Waiting 60 seconds for next check...
+2025-05-08 12:15:17,733 - INFO - Current progress: 205/1000 counties (20.5%)
+2025-05-08 12:15:17,734 - INFO - Average score: 0.25, Range: 0.00-1.00, Median: 0.22
+2025-05-08 12:15:17,735 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 12:15:17,735 - INFO - Waiting 60 seconds for next check...
+2025-05-08 12:16:18,000 - INFO - Current progress: 210/1000 counties (21.0%)
+2025-05-08 12:16:18,000 - INFO - Average score: 0.25, Range: 0.00-1.00, Median: 0.22
+2025-05-08 12:16:18,001 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 12:16:18,001 - INFO - Waiting 60 seconds for next check...
+2025-05-08 12:17:18,223 - INFO - Current progress: 218/1000 counties (21.8%)
+2025-05-08 12:17:18,223 - INFO - Average score: 0.25, Range: 0.00-1.00, Median: 0.23
+2025-05-08 12:17:18,226 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 12:17:18,226 - INFO - Waiting 60 seconds for next check...
+2025-05-08 12:18:18,504 - INFO - Current progress: 226/1000 counties (22.6%)
+2025-05-08 12:18:18,506 - INFO - Average score: 0.25, Range: 0.00-1.00, Median: 0.23
+2025-05-08 12:18:18,506 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 12:18:18,506 - INFO - Waiting 60 seconds for next check...
+2025-05-08 12:19:18,769 - INFO - Current progress: 231/1000 counties (23.1%)
+2025-05-08 12:19:18,770 - INFO - Average score: 0.25, Range: 0.00-1.00, Median: 0.23
+2025-05-08 12:19:18,771 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 12:19:18,771 - INFO - Waiting 60 seconds for next check...
+2025-05-08 12:20:18,825 - ERROR - Error getting current progress: Expecting ',' delimiter: line 64 column 270443 (char 5750784)
+2025-05-08 12:20:18,827 - INFO - Waiting 60 seconds for next check...
+2025-05-08 12:21:19,136 - INFO - Current progress: 246/1000 counties (24.6%)
+2025-05-08 12:21:19,137 - INFO - Average score: 0.24, Range: 0.00-1.00, Median: 0.21
+2025-05-08 12:21:19,138 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 12:21:19,138 - INFO - Waiting 60 seconds for next check...
+2025-05-08 12:22:19,434 - INFO - Current progress: 252/1000 counties (25.2%)
+2025-05-08 12:22:19,435 - INFO - Average score: 0.24, Range: 0.00-1.00, Median: 0.21
+2025-05-08 12:22:19,435 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 12:22:19,436 - INFO - Waiting 60 seconds for next check...
+2025-05-08 12:23:19,748 - INFO - Current progress: 258/1000 counties (25.8%)
+2025-05-08 12:23:19,749 - INFO - Average score: 0.23, Range: 0.00-1.00, Median: 0.21
+2025-05-08 12:23:19,749 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 12:23:19,749 - INFO - Waiting 60 seconds for next check...
+2025-05-08 12:24:19,982 - ERROR - Error getting current progress: Expecting ',' delimiter: line 217 column 34050 (char 18599934)
+2025-05-08 12:24:19,983 - INFO - Waiting 60 seconds for next check...
+2025-05-08 12:25:20,428 - INFO - Current progress: 268/1000 counties (26.8%)
+2025-05-08 12:25:20,429 - INFO - Average score: 0.23, Range: 0.00-1.00, Median: 0.21
+2025-05-08 12:25:20,429 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 12:25:20,429 - INFO - Waiting 60 seconds for next check...
+2025-05-08 12:26:20,784 - INFO - Current progress: 276/1000 counties (27.6%)
+2025-05-08 12:26:20,785 - INFO - Average score: 0.23, Range: 0.00-1.00, Median: 0.20
+2025-05-08 12:26:20,786 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 12:26:20,786 - INFO - Waiting 60 seconds for next check...
+2025-05-08 12:27:21,155 - INFO - Current progress: 281/1000 counties (28.1%)
+2025-05-08 12:27:21,157 - INFO - Average score: 0.23, Range: 0.00-1.00, Median: 0.20
+2025-05-08 12:27:21,157 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 12:27:21,157 - INFO - Waiting 60 seconds for next check...
+2025-05-08 12:28:21,536 - INFO - Current progress: 286/1000 counties (28.6%)
+2025-05-08 12:28:21,537 - INFO - Average score: 0.23, Range: 0.00-1.00, Median: 0.21
+2025-05-08 12:28:21,538 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 12:28:21,538 - INFO - Waiting 60 seconds for next check...
+2025-05-08 12:29:21,892 - INFO - Current progress: 292/1000 counties (29.2%)
+2025-05-08 12:29:21,893 - INFO - Average score: 0.22, Range: 0.00-1.00, Median: 0.20
+2025-05-08 12:29:21,894 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 12:29:21,894 - INFO - Waiting 60 seconds for next check...
+2025-05-08 12:30:22,230 - INFO - Current progress: 300/1000 counties (30.0%)
+2025-05-08 12:30:22,231 - INFO - Average score: 0.22, Range: 0.00-1.00, Median: 0.20
+2025-05-08 12:30:22,232 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 12:30:22,232 - INFO - Waiting 60 seconds for next check...
+2025-05-08 12:31:22,596 - INFO - Current progress: 306/1000 counties (30.6%)
+2025-05-08 12:31:22,597 - INFO - Average score: 0.22, Range: 0.00-1.00, Median: 0.20
+2025-05-08 12:31:22,597 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 12:31:22,597 - INFO - Waiting 60 seconds for next check...
+2025-05-08 12:32:22,680 - ERROR - Error getting current progress: Expecting ',' delimiter: line 91 column 122629 (char 8122368)
+2025-05-08 12:32:22,681 - INFO - Waiting 60 seconds for next check...
+2025-05-08 12:33:23,047 - INFO - Current progress: 320/1000 counties (32.0%)
+2025-05-08 12:33:23,047 - INFO - Average score: 0.22, Range: 0.00-1.00, Median: 0.19
+2025-05-08 12:33:23,049 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 12:33:23,049 - INFO - Waiting 60 seconds for next check...
+2025-05-08 12:34:23,437 - INFO - Current progress: 326/1000 counties (32.6%)
+2025-05-08 12:34:23,439 - INFO - Average score: 0.22, Range: 0.00-1.00, Median: 0.19
+2025-05-08 12:34:23,440 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 12:34:23,440 - INFO - Waiting 60 seconds for next check...
+2025-05-08 12:35:23,817 - INFO - Current progress: 331/1000 counties (33.1%)
+2025-05-08 12:35:23,818 - INFO - Average score: 0.22, Range: 0.00-1.00, Median: 0.19
+2025-05-08 12:35:23,818 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 12:35:23,819 - INFO - Waiting 60 seconds for next check...
+2025-05-08 12:36:24,182 - INFO - Current progress: 338/1000 counties (33.8%)
+2025-05-08 12:36:24,183 - INFO - Average score: 0.21, Range: 0.00-1.00, Median: 0.18
+2025-05-08 12:36:24,183 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 12:36:24,183 - INFO - Waiting 60 seconds for next check...
+2025-05-08 12:37:24,566 - INFO - Current progress: 346/1000 counties (34.6%)
+2025-05-08 12:37:24,567 - INFO - Average score: 0.21, Range: 0.00-1.00, Median: 0.18
+2025-05-08 12:37:24,568 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 12:37:24,568 - INFO - Waiting 60 seconds for next check...
+2025-05-08 12:38:24,945 - INFO - Current progress: 350/1000 counties (35.0%)
+2025-05-08 12:38:24,946 - INFO - Average score: 0.21, Range: 0.00-1.00, Median: 0.18
+2025-05-08 12:38:24,947 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 12:38:24,947 - INFO - Waiting 60 seconds for next check...
+2025-05-08 12:39:25,336 - INFO - Current progress: 357/1000 counties (35.7%)
+2025-05-08 12:39:25,337 - INFO - Average score: 0.21, Range: 0.00-1.00, Median: 0.18
+2025-05-08 12:39:25,337 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 12:39:25,338 - INFO - Waiting 60 seconds for next check...
+2025-05-08 12:40:25,583 - ERROR - Error getting current progress: Expecting ',' delimiter: line 217 column 34050 (char 18599934)
+2025-05-08 12:40:25,584 - INFO - Waiting 60 seconds for next check...
+2025-05-08 12:41:25,980 - INFO - Current progress: 368/1000 counties (36.8%)
+2025-05-08 12:41:25,981 - INFO - Average score: 0.21, Range: 0.00-1.00, Median: 0.18
+2025-05-08 12:41:25,983 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 12:41:25,983 - INFO - Waiting 60 seconds for next check...
+2025-05-08 12:42:26,392 - INFO - Current progress: 375/1000 counties (37.5%)
+2025-05-08 12:42:26,393 - INFO - Average score: 0.21, Range: 0.00-1.00, Median: 0.18
+2025-05-08 12:42:26,394 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 12:42:26,394 - INFO - Waiting 60 seconds for next check...
+2025-05-08 12:43:26,845 - INFO - Current progress: 379/1000 counties (37.9%)
+2025-05-08 12:43:26,846 - INFO - Average score: 0.20, Range: 0.00-1.00, Median: 0.18
+2025-05-08 12:43:26,848 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 12:43:26,848 - INFO - Waiting 60 seconds for next check...
+2025-05-08 12:44:26,996 - ERROR - Error getting current progress: Expecting ',' delimiter: line 117 column 323715 (char 12275712)
+2025-05-08 12:44:26,998 - INFO - Waiting 60 seconds for next check...
+2025-05-08 12:45:27,434 - INFO - Current progress: 389/1000 counties (38.9%)
+2025-05-08 12:45:27,435 - INFO - Average score: 0.20, Range: 0.00-1.00, Median: 0.18
+2025-05-08 12:45:27,435 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 12:45:27,435 - INFO - Waiting 60 seconds for next check...
+2025-05-08 12:46:27,878 - INFO - Current progress: 396/1000 counties (39.6%)
+2025-05-08 12:46:27,879 - INFO - Average score: 0.20, Range: 0.00-1.00, Median: 0.17
+2025-05-08 12:46:27,882 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 12:46:27,882 - INFO - Waiting 60 seconds for next check...
+2025-05-08 12:47:28,347 - INFO - Current progress: 404/1000 counties (40.4%)
+2025-05-08 12:47:28,347 - INFO - Average score: 0.20, Range: 0.00-1.00, Median: 0.17
+2025-05-08 12:47:28,348 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 12:47:28,348 - INFO - Waiting 60 seconds for next check...
+2025-05-08 12:48:28,796 - INFO - Current progress: 407/1000 counties (40.7%)
+2025-05-08 12:48:28,796 - INFO - Average score: 0.20, Range: 0.00-1.00, Median: 0.17
+2025-05-08 12:48:28,797 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 12:48:28,797 - INFO - Waiting 60 seconds for next check...
+2025-05-08 12:49:28,807 - ERROR - Error getting current progress: Expecting value: line 1 column 1 (char 0)
+2025-05-08 12:49:28,808 - INFO - Waiting 60 seconds for next check...
+2025-05-08 12:52:31,686 - INFO - Current progress: 419/1000 counties (41.9%)
+2025-05-08 12:52:31,686 - INFO - Average score: 0.20, Range: 0.00-1.00, Median: 0.17
+2025-05-08 12:52:31,689 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 12:52:31,689 - INFO - Waiting 60 seconds for next check...
+2025-05-08 12:53:32,119 - INFO - Current progress: 419/1000 counties (41.9%)
+2025-05-08 12:53:32,120 - INFO - Average score: 0.20, Range: 0.00-1.00, Median: 0.17
+2025-05-08 12:53:32,121 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 12:53:32,121 - INFO - Waiting 60 seconds for next check...
+2025-05-08 12:54:32,568 - INFO - Current progress: 419/1000 counties (41.9%)
+2025-05-08 12:54:32,568 - INFO - Average score: 0.20, Range: 0.00-1.00, Median: 0.17
+2025-05-08 12:54:32,569 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 12:54:32,569 - INFO - Waiting 60 seconds for next check...
+2025-05-08 12:55:33,099 - INFO - Current progress: 419/1000 counties (41.9%)
+2025-05-08 12:55:33,100 - INFO - Average score: 0.20, Range: 0.00-1.00, Median: 0.17
+2025-05-08 12:55:33,101 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 12:55:33,101 - INFO - Waiting 60 seconds for next check...
+2025-05-08 12:56:33,583 - INFO - Current progress: 419/1000 counties (41.9%)
+2025-05-08 12:56:33,583 - INFO - Average score: 0.20, Range: 0.00-1.00, Median: 0.17
+2025-05-08 12:56:33,587 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 12:56:33,587 - INFO - Waiting 60 seconds for next check...
+2025-05-08 12:57:34,064 - INFO - Current progress: 419/1000 counties (41.9%)
+2025-05-08 12:57:34,064 - INFO - Average score: 0.20, Range: 0.00-1.00, Median: 0.17
+2025-05-08 12:57:34,065 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 12:57:34,065 - INFO - Waiting 60 seconds for next check...
+2025-05-08 12:58:34,552 - INFO - Current progress: 419/1000 counties (41.9%)
+2025-05-08 12:58:34,552 - INFO - Average score: 0.20, Range: 0.00-1.00, Median: 0.17
+2025-05-08 12:58:34,553 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 12:58:34,553 - INFO - Waiting 60 seconds for next check...
+2025-05-08 12:59:35,017 - INFO - Current progress: 419/1000 counties (41.9%)
+2025-05-08 12:59:35,017 - INFO - Average score: 0.20, Range: 0.00-1.00, Median: 0.17
+2025-05-08 12:59:35,019 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 12:59:35,020 - INFO - Waiting 60 seconds for next check...
+2025-05-08 13:00:35,468 - INFO - Current progress: 419/1000 counties (41.9%)
+2025-05-08 13:00:35,469 - INFO - Average score: 0.20, Range: 0.00-1.00, Median: 0.17
+2025-05-08 13:00:35,469 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 13:00:35,469 - INFO - Waiting 60 seconds for next check...
+2025-05-08 13:01:35,909 - INFO - Current progress: 419/1000 counties (41.9%)
+2025-05-08 13:01:35,909 - INFO - Average score: 0.20, Range: 0.00-1.00, Median: 0.17
+2025-05-08 13:01:35,909 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 13:01:35,909 - INFO - Waiting 60 seconds for next check...
+2025-05-08 13:02:36,395 - INFO - Current progress: 419/1000 counties (41.9%)
+2025-05-08 13:02:36,395 - INFO - Average score: 0.20, Range: 0.00-1.00, Median: 0.17
+2025-05-08 13:02:36,396 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 13:02:36,396 - INFO - Waiting 60 seconds for next check...
+2025-05-08 13:03:36,837 - INFO - Current progress: 419/1000 counties (41.9%)
+2025-05-08 13:03:36,837 - INFO - Average score: 0.20, Range: 0.00-1.00, Median: 0.17
+2025-05-08 13:03:36,838 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 13:03:36,838 - INFO - Waiting 60 seconds for next check...
+2025-05-08 13:04:37,314 - INFO - Current progress: 419/1000 counties (41.9%)
+2025-05-08 13:04:37,314 - INFO - Average score: 0.20, Range: 0.00-1.00, Median: 0.17
+2025-05-08 13:04:37,314 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 13:04:37,314 - INFO - Waiting 60 seconds for next check...
+2025-05-08 13:05:37,765 - INFO - Current progress: 419/1000 counties (41.9%)
+2025-05-08 13:05:37,765 - INFO - Average score: 0.20, Range: 0.00-1.00, Median: 0.17
+2025-05-08 13:05:37,767 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 13:05:37,767 - INFO - Waiting 60 seconds for next check...
+2025-05-08 13:06:38,207 - INFO - Current progress: 419/1000 counties (41.9%)
+2025-05-08 13:06:38,209 - INFO - Average score: 0.20, Range: 0.00-1.00, Median: 0.17
+2025-05-08 13:06:38,212 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 13:06:38,213 - INFO - Waiting 60 seconds for next check...
+2025-05-08 13:07:38,665 - INFO - Current progress: 419/1000 counties (41.9%)
+2025-05-08 13:07:38,666 - INFO - Average score: 0.20, Range: 0.00-1.00, Median: 0.17
+2025-05-08 13:07:38,670 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 13:07:38,670 - INFO - Waiting 60 seconds for next check...
+2025-05-08 13:08:39,110 - INFO - Current progress: 419/1000 counties (41.9%)
+2025-05-08 13:08:39,110 - INFO - Average score: 0.20, Range: 0.00-1.00, Median: 0.17
+2025-05-08 13:08:39,110 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 13:08:39,110 - INFO - Waiting 60 seconds for next check...
+2025-05-08 13:09:39,547 - INFO - Current progress: 419/1000 counties (41.9%)
+2025-05-08 13:09:39,547 - INFO - Average score: 0.20, Range: 0.00-1.00, Median: 0.17
+2025-05-08 13:09:39,547 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 13:09:39,547 - INFO - Waiting 60 seconds for next check...
+2025-05-08 13:10:39,996 - INFO - Current progress: 419/1000 counties (41.9%)
+2025-05-08 13:10:39,997 - INFO - Average score: 0.20, Range: 0.00-1.00, Median: 0.17
+2025-05-08 13:10:40,001 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 13:10:40,001 - INFO - Waiting 60 seconds for next check...
+2025-05-08 13:11:40,443 - INFO - Current progress: 419/1000 counties (41.9%)
+2025-05-08 13:11:40,443 - INFO - Average score: 0.20, Range: 0.00-1.00, Median: 0.17
+2025-05-08 13:11:40,444 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 13:11:40,444 - INFO - Waiting 60 seconds for next check...
+2025-05-08 13:12:40,894 - INFO - Current progress: 419/1000 counties (41.9%)
+2025-05-08 13:12:40,894 - INFO - Average score: 0.20, Range: 0.00-1.00, Median: 0.17
+2025-05-08 13:12:40,895 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 13:12:40,895 - INFO - Waiting 60 seconds for next check...
+2025-05-08 13:13:41,328 - INFO - Current progress: 419/1000 counties (41.9%)
+2025-05-08 13:13:41,329 - INFO - Average score: 0.20, Range: 0.00-1.00, Median: 0.17
+2025-05-08 13:13:41,331 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 13:13:41,331 - INFO - Waiting 60 seconds for next check...
+2025-05-08 13:14:41,816 - INFO - Current progress: 419/1000 counties (41.9%)
+2025-05-08 13:14:41,816 - INFO - Average score: 0.20, Range: 0.00-1.00, Median: 0.17
+2025-05-08 13:14:41,816 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 13:14:41,816 - INFO - Waiting 60 seconds for next check...
+2025-05-08 13:15:42,284 - INFO - Current progress: 419/1000 counties (41.9%)
+2025-05-08 13:15:42,284 - INFO - Average score: 0.20, Range: 0.00-1.00, Median: 0.17
+2025-05-08 13:15:42,286 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 13:15:42,286 - INFO - Waiting 60 seconds for next check...
+2025-05-08 13:16:42,740 - INFO - Current progress: 419/1000 counties (41.9%)
+2025-05-08 13:16:42,740 - INFO - Average score: 0.20, Range: 0.00-1.00, Median: 0.17
+2025-05-08 13:16:42,740 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 13:16:42,740 - INFO - Waiting 60 seconds for next check...
+2025-05-08 13:17:43,185 - INFO - Current progress: 419/1000 counties (41.9%)
+2025-05-08 13:17:43,185 - INFO - Average score: 0.20, Range: 0.00-1.00, Median: 0.17
+2025-05-08 13:17:43,187 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 13:17:43,187 - INFO - Waiting 60 seconds for next check...
+2025-05-08 13:18:43,677 - INFO - Current progress: 419/1000 counties (41.9%)
+2025-05-08 13:18:43,677 - INFO - Average score: 0.20, Range: 0.00-1.00, Median: 0.17
+2025-05-08 13:18:43,679 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 13:18:43,679 - INFO - Waiting 60 seconds for next check...
+2025-05-08 13:19:44,116 - INFO - Current progress: 419/1000 counties (41.9%)
+2025-05-08 13:19:44,116 - INFO - Average score: 0.20, Range: 0.00-1.00, Median: 0.17
+2025-05-08 13:19:44,116 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 13:19:44,117 - INFO - Waiting 60 seconds for next check...
+2025-05-08 13:20:44,572 - INFO - Current progress: 419/1000 counties (41.9%)
+2025-05-08 13:20:44,572 - INFO - Average score: 0.20, Range: 0.00-1.00, Median: 0.17
+2025-05-08 13:20:44,574 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 13:20:44,574 - INFO - Waiting 60 seconds for next check...
+2025-05-08 13:21:45,018 - INFO - Current progress: 419/1000 counties (41.9%)
+2025-05-08 13:21:45,018 - INFO - Average score: 0.20, Range: 0.00-1.00, Median: 0.17
+2025-05-08 13:21:45,018 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 13:21:45,018 - INFO - Waiting 60 seconds for next check...
+2025-05-08 13:22:45,476 - INFO - Current progress: 419/1000 counties (41.9%)
+2025-05-08 13:22:45,476 - INFO - Average score: 0.20, Range: 0.00-1.00, Median: 0.17
+2025-05-08 13:22:45,477 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 13:22:45,477 - INFO - Waiting 60 seconds for next check...
+2025-05-08 13:23:45,935 - INFO - Current progress: 419/1000 counties (41.9%)
+2025-05-08 13:23:45,936 - INFO - Average score: 0.20, Range: 0.00-1.00, Median: 0.17
+2025-05-08 13:23:45,939 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 13:23:45,939 - INFO - Waiting 60 seconds for next check...
+2025-05-08 13:24:46,392 - INFO - Current progress: 419/1000 counties (41.9%)
+2025-05-08 13:24:46,393 - INFO - Average score: 0.20, Range: 0.00-1.00, Median: 0.17
+2025-05-08 13:24:46,393 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 13:24:46,393 - INFO - Waiting 60 seconds for next check...
+2025-05-08 13:25:46,838 - INFO - Current progress: 419/1000 counties (41.9%)
+2025-05-08 13:25:46,838 - INFO - Average score: 0.20, Range: 0.00-1.00, Median: 0.17
+2025-05-08 13:25:46,838 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 13:25:46,838 - INFO - Waiting 60 seconds for next check...
+2025-05-08 13:26:47,288 - INFO - Current progress: 419/1000 counties (41.9%)
+2025-05-08 13:26:47,288 - INFO - Average score: 0.20, Range: 0.00-1.00, Median: 0.17
+2025-05-08 13:26:47,293 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 13:26:47,293 - INFO - Waiting 60 seconds for next check...
+2025-05-08 13:59:49,788 - INFO - Current progress: 419/1000 counties (41.9%)
+2025-05-08 13:59:49,788 - INFO - Average score: 0.20, Range: 0.00-1.00, Median: 0.17
+2025-05-08 13:59:49,788 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 13:59:49,788 - INFO - Waiting 60 seconds for next check...
+2025-05-08 15:05:12,062 - INFO - Current progress: 419/1000 counties (41.9%)
+2025-05-08 15:05:12,063 - INFO - Average score: 0.20, Range: 0.00-1.00, Median: 0.17
+2025-05-08 15:05:12,065 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 15:05:12,065 - INFO - Waiting 60 seconds for next check...
+2025-05-08 15:06:12,523 - INFO - Current progress: 419/1000 counties (41.9%)
+2025-05-08 15:06:12,523 - INFO - Average score: 0.20, Range: 0.00-1.00, Median: 0.17
+2025-05-08 15:06:12,524 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 15:06:12,524 - INFO - Waiting 60 seconds for next check...
+2025-05-08 15:07:12,998 - INFO - Current progress: 419/1000 counties (41.9%)
+2025-05-08 15:07:12,998 - INFO - Average score: 0.20, Range: 0.00-1.00, Median: 0.17
+2025-05-08 15:07:12,998 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 15:07:12,998 - INFO - Waiting 60 seconds for next check...
+2025-05-08 15:08:13,470 - INFO - Current progress: 419/1000 counties (41.9%)
+2025-05-08 15:08:13,471 - INFO - Average score: 0.20, Range: 0.00-1.00, Median: 0.17
+2025-05-08 15:08:13,473 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 15:08:13,473 - INFO - Waiting 60 seconds for next check...
+2025-05-08 15:08:45,824 - INFO - Starting monitoring of data/final/real_county_scores.geojson
+2025-05-08 15:08:45,825 - INFO - Target count: 1000 counties
+2025-05-08 15:08:45,825 - INFO - Check interval: 60 seconds
+2025-05-08 15:08:46,360 - INFO - Current progress: 419/1000 counties (41.9%)
+2025-05-08 15:08:46,360 - INFO - Average score: 0.20, Range: 0.00-1.00, Median: 0.17
+2025-05-08 15:08:46,361 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 15:08:46,361 - INFO - Waiting 60 seconds for next check...
+2025-05-08 15:09:46,849 - INFO - Current progress: 426/1000 counties (42.6%)
+2025-05-08 15:09:46,849 - INFO - Average score: 0.19, Range: 0.00-1.00, Median: 0.17
+2025-05-08 15:09:46,850 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 15:09:46,850 - INFO - Waiting 60 seconds for next check...
+2025-05-08 15:10:47,395 - INFO - Current progress: 429/1000 counties (42.9%)
+2025-05-08 15:10:47,396 - INFO - Average score: 0.19, Range: 0.00-1.00, Median: 0.17
+2025-05-08 15:10:47,396 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 15:10:47,396 - INFO - Waiting 60 seconds for next check...
+2025-05-08 15:11:47,675 - ERROR - Error getting current progress: Expecting ',' delimiter: line 257 column 180617 (char 22347774)
+2025-05-08 15:11:47,677 - INFO - Waiting 60 seconds for next check...
+2025-05-08 15:12:48,193 - INFO - Current progress: 439/1000 counties (43.9%)
+2025-05-08 15:12:48,194 - INFO - Average score: 0.19, Range: 0.00-1.00, Median: 0.16
+2025-05-08 15:12:48,196 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 15:12:48,196 - INFO - Waiting 60 seconds for next check...
+2025-05-08 15:13:48,343 - ERROR - Error getting current progress: Expecting ',' delimiter: line 145 column 37651 (char 13987840)
+2025-05-08 15:13:48,344 - INFO - Waiting 60 seconds for next check...
+2025-05-08 15:14:48,878 - ERROR - Error getting current progress: Expecting ',' delimiter: line 418 column 20757 (char 33603581)
+2025-05-08 15:14:48,880 - INFO - Waiting 60 seconds for next check...
+2025-05-08 15:15:49,406 - INFO - Current progress: 449/1000 counties (44.9%)
+2025-05-08 15:15:49,406 - INFO - Average score: 0.19, Range: 0.00-1.00, Median: 0.16
+2025-05-08 15:15:49,409 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 15:15:49,409 - INFO - Waiting 60 seconds for next check...
+2025-05-08 15:16:49,933 - INFO - Current progress: 454/1000 counties (45.4%)
+2025-05-08 15:16:49,934 - INFO - Average score: 0.19, Range: 0.00-1.00, Median: 0.16
+2025-05-08 15:16:49,934 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 15:16:49,934 - INFO - Waiting 60 seconds for next check...
+2025-05-08 15:17:50,877 - INFO - Current progress: 459/1000 counties (45.9%)
+2025-05-08 15:17:50,877 - INFO - Average score: 0.19, Range: 0.00-1.00, Median: 0.15
+2025-05-08 15:17:50,879 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 15:17:50,879 - INFO - Waiting 60 seconds for next check...
+2025-05-08 15:18:51,426 - INFO - Current progress: 461/1000 counties (46.1%)
+2025-05-08 15:18:51,427 - INFO - Average score: 0.19, Range: 0.00-1.00, Median: 0.15
+2025-05-08 15:18:51,428 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 15:18:51,428 - INFO - Waiting 60 seconds for next check...
+2025-05-08 15:19:52,028 - INFO - Current progress: 468/1000 counties (46.8%)
+2025-05-08 15:19:52,028 - INFO - Average score: 0.19, Range: 0.00-1.00, Median: 0.15
+2025-05-08 15:19:52,029 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 15:19:52,029 - INFO - Waiting 60 seconds for next check...
+2025-05-08 15:20:52,610 - INFO - Current progress: 469/1000 counties (46.9%)
+2025-05-08 15:20:52,611 - INFO - Average score: 0.19, Range: 0.00-1.00, Median: 0.15
+2025-05-08 15:20:52,611 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 15:20:52,611 - INFO - Waiting 60 seconds for next check...
+2025-05-08 15:21:53,180 - INFO - Current progress: 475/1000 counties (47.5%)
+2025-05-08 15:21:53,181 - INFO - Average score: 0.19, Range: 0.00-1.00, Median: 0.16
+2025-05-08 15:21:53,181 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 15:21:53,181 - INFO - Waiting 60 seconds for next check...
+2025-05-08 15:22:53,749 - INFO - Current progress: 479/1000 counties (47.9%)
+2025-05-08 15:22:53,750 - INFO - Average score: 0.19, Range: 0.00-1.00, Median: 0.16
+2025-05-08 15:22:53,751 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 15:22:53,751 - INFO - Waiting 60 seconds for next check...
+2025-05-08 15:23:54,305 - INFO - Current progress: 482/1000 counties (48.2%)
+2025-05-08 15:23:54,305 - INFO - Average score: 0.19, Range: 0.00-1.00, Median: 0.16
+2025-05-08 15:23:54,306 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 15:23:54,306 - INFO - Waiting 60 seconds for next check...
+2025-05-08 15:24:54,384 - ERROR - Error getting current progress: Expecting value: line 77 column 54077 (char 6610944)
+2025-05-08 15:24:54,386 - INFO - Waiting 60 seconds for next check...
+2025-05-08 15:25:54,954 - INFO - Current progress: 489/1000 counties (48.9%)
+2025-05-08 15:25:54,955 - INFO - Average score: 0.19, Range: 0.00-1.00, Median: 0.15
+2025-05-08 15:25:54,957 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 15:25:54,957 - INFO - Waiting 60 seconds for next check...
+2025-05-08 15:26:55,534 - INFO - Current progress: 495/1000 counties (49.5%)
+2025-05-08 15:26:55,535 - INFO - Average score: 0.19, Range: 0.00-1.00, Median: 0.16
+2025-05-08 15:26:55,536 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 15:26:55,536 - INFO - Waiting 60 seconds for next check...
+2025-05-08 15:27:56,201 - INFO - Current progress: 499/1000 counties (49.9%)
+2025-05-08 15:27:56,203 - INFO - Average score: 0.19, Range: 0.00-1.00, Median: 0.16
+2025-05-08 15:27:56,203 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 15:27:56,203 - INFO - Waiting 60 seconds for next check...
+2025-05-08 15:28:57,069 - INFO - Current progress: 502/1000 counties (50.2%)
+2025-05-08 15:28:57,070 - INFO - Average score: 0.19, Range: 0.00-1.00, Median: 0.16
+2025-05-08 15:28:57,070 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 15:28:57,071 - INFO - Waiting 60 seconds for next check...
+2025-05-08 15:29:58,039 - INFO - Current progress: 509/1000 counties (50.9%)
+2025-05-08 15:29:58,040 - INFO - Average score: 0.19, Range: 0.00-1.00, Median: 0.16
+2025-05-08 15:29:58,041 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 15:29:58,041 - INFO - Waiting 60 seconds for next check...
+2025-05-08 15:30:58,779 - INFO - Current progress: 509/1000 counties (50.9%)
+2025-05-08 15:30:58,779 - INFO - Average score: 0.19, Range: 0.00-1.00, Median: 0.16
+2025-05-08 15:30:58,782 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 15:30:58,782 - INFO - Waiting 60 seconds for next check...
+2025-05-08 15:31:59,404 - INFO - Current progress: 516/1000 counties (51.6%)
+2025-05-08 15:31:59,405 - INFO - Average score: 0.19, Range: 0.00-1.00, Median: 0.16
+2025-05-08 15:31:59,405 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 15:31:59,405 - INFO - Waiting 60 seconds for next check...
+2025-05-08 15:33:00,079 - INFO - Current progress: 519/1000 counties (51.9%)
+2025-05-08 15:33:00,080 - INFO - Average score: 0.19, Range: 0.00-1.00, Median: 0.16
+2025-05-08 15:33:00,080 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 15:33:00,080 - INFO - Waiting 60 seconds for next check...
+2025-05-08 15:34:00,764 - INFO - Current progress: 523/1000 counties (52.3%)
+2025-05-08 15:34:00,764 - INFO - Average score: 0.19, Range: 0.00-1.00, Median: 0.16
+2025-05-08 15:34:00,765 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 15:34:00,765 - INFO - Waiting 60 seconds for next check...
+2025-05-08 15:35:01,504 - INFO - Current progress: 529/1000 counties (52.9%)
+2025-05-08 15:35:01,505 - INFO - Average score: 0.19, Range: 0.00-1.00, Median: 0.16
+2025-05-08 15:35:01,506 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 15:35:01,506 - INFO - Waiting 60 seconds for next check...
+2025-05-08 15:36:02,225 - INFO - Current progress: 529/1000 counties (52.9%)
+2025-05-08 15:36:02,227 - INFO - Average score: 0.19, Range: 0.00-1.00, Median: 0.16
+2025-05-08 15:36:02,228 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 15:36:02,228 - INFO - Waiting 60 seconds for next check...
+2025-05-08 15:37:02,895 - INFO - Current progress: 535/1000 counties (53.5%)
+2025-05-08 15:37:02,895 - INFO - Average score: 0.19, Range: 0.00-1.00, Median: 0.16
+2025-05-08 15:37:02,896 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 15:37:02,896 - INFO - Waiting 60 seconds for next check...
+2025-05-08 15:38:03,596 - INFO - Current progress: 539/1000 counties (53.9%)
+2025-05-08 15:38:03,597 - INFO - Average score: 0.19, Range: 0.00-1.00, Median: 0.15
+2025-05-08 15:38:03,597 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 15:38:03,597 - INFO - Waiting 60 seconds for next check...
+2025-05-08 15:39:03,678 - ERROR - Error getting current progress: Expecting ',' delimiter: line 63 column 35013 (char 5476352)
+2025-05-08 15:39:03,679 - INFO - Waiting 60 seconds for next check...
+2025-05-08 15:40:03,731 - ERROR - Error getting current progress: Expecting ',' delimiter: line 55 column 107678 (char 4599808)
+2025-05-08 15:40:03,731 - INFO - Waiting 60 seconds for next check...
+2025-05-08 15:41:04,404 - INFO - Current progress: 549/1000 counties (54.9%)
+2025-05-08 15:41:04,404 - INFO - Average score: 0.19, Range: 0.00-1.00, Median: 0.16
+2025-05-08 15:41:04,405 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 15:41:04,405 - INFO - Waiting 60 seconds for next check...
+2025-05-08 15:42:05,044 - INFO - Current progress: 554/1000 counties (55.4%)
+2025-05-08 15:42:05,044 - INFO - Average score: 0.19, Range: 0.00-1.00, Median: 0.16
+2025-05-08 15:42:05,045 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 15:42:05,045 - INFO - Waiting 60 seconds for next check...
+2025-05-08 15:43:05,677 - INFO - Current progress: 559/1000 counties (55.9%)
+2025-05-08 15:43:05,678 - INFO - Average score: 0.19, Range: 0.00-1.00, Median: 0.16
+2025-05-08 15:43:05,679 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 15:43:05,679 - INFO - Waiting 60 seconds for next check...
+2025-05-08 15:44:06,298 - INFO - Current progress: 560/1000 counties (56.0%)
+2025-05-08 15:44:06,299 - INFO - Average score: 0.19, Range: 0.00-1.00, Median: 0.16
+2025-05-08 15:44:06,301 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 15:44:06,301 - INFO - Waiting 60 seconds for next check...
+2025-05-08 15:45:06,575 - ERROR - Error getting current progress: Expecting value: line 223 column 19879 (char 19038206)
+2025-05-08 15:45:06,577 - INFO - Waiting 60 seconds for next check...
+2025-05-08 15:46:07,233 - INFO - Current progress: 569/1000 counties (56.9%)
+2025-05-08 15:46:07,233 - INFO - Average score: 0.19, Range: 0.00-1.00, Median: 0.16
+2025-05-08 15:46:07,234 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 15:46:07,234 - INFO - Waiting 60 seconds for next check...
+2025-05-08 15:47:07,910 - INFO - Current progress: 573/1000 counties (57.3%)
+2025-05-08 15:47:07,911 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.15
+2025-05-08 15:47:07,912 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 15:47:07,912 - INFO - Waiting 60 seconds for next check...
+2025-05-08 15:48:08,550 - INFO - Current progress: 579/1000 counties (57.9%)
+2025-05-08 15:48:08,551 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.16
+2025-05-08 15:48:08,554 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 15:48:08,554 - INFO - Waiting 60 seconds for next check...
+2025-05-08 15:49:08,698 - ERROR - Error getting current progress: Expecting ',' delimiter: line 121 column 146005 (char 12767232)
+2025-05-08 15:49:08,699 - INFO - Waiting 60 seconds for next check...
+2025-05-08 15:50:09,360 - INFO - Current progress: 586/1000 counties (58.6%)
+2025-05-08 15:50:09,361 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.16
+2025-05-08 15:50:09,362 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 15:50:09,362 - INFO - Waiting 60 seconds for next check...
+2025-05-08 15:51:10,030 - INFO - Current progress: 589/1000 counties (58.9%)
+2025-05-08 15:51:10,031 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.16
+2025-05-08 15:51:10,032 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 15:51:10,032 - INFO - Waiting 60 seconds for next check...
+2025-05-08 15:52:10,669 - INFO - Current progress: 593/1000 counties (59.3%)
+2025-05-08 15:52:10,669 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.15
+2025-05-08 15:52:10,670 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 15:52:10,670 - INFO - Waiting 60 seconds for next check...
+2025-05-08 15:53:11,354 - INFO - Current progress: 599/1000 counties (59.9%)
+2025-05-08 15:53:11,355 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.15
+2025-05-08 15:53:11,356 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 15:53:11,356 - INFO - Waiting 60 seconds for next check...
+2025-05-08 15:54:11,948 - INFO - Current progress: 599/1000 counties (59.9%)
+2025-05-08 15:54:11,949 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.15
+2025-05-08 15:54:11,950 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 15:54:11,950 - INFO - Waiting 60 seconds for next check...
+2025-05-08 15:55:12,324 - ERROR - Error getting current progress: Expecting ',' delimiter: line 349 column 36464 (char 29036542)
+2025-05-08 15:55:12,325 - INFO - Waiting 60 seconds for next check...
+2025-05-08 15:56:13,005 - INFO - Current progress: 609/1000 counties (60.9%)
+2025-05-08 15:56:13,005 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.15
+2025-05-08 15:56:13,006 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 15:56:13,006 - INFO - Waiting 60 seconds for next check...
+2025-05-08 15:57:13,688 - INFO - Current progress: 612/1000 counties (61.2%)
+2025-05-08 15:57:13,688 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.15
+2025-05-08 15:57:13,689 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 15:57:13,689 - INFO - Waiting 60 seconds for next check...
+2025-05-08 15:58:14,344 - INFO - Current progress: 619/1000 counties (61.9%)
+2025-05-08 15:58:14,345 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.15
+2025-05-08 15:58:14,346 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 15:58:14,346 - INFO - Waiting 60 seconds for next check...
+2025-05-08 15:59:14,961 - INFO - Current progress: 619/1000 counties (61.9%)
+2025-05-08 15:59:14,961 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.15
+2025-05-08 15:59:14,962 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 15:59:14,962 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:00:15,637 - INFO - Current progress: 625/1000 counties (62.5%)
+2025-05-08 16:00:15,638 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.15
+2025-05-08 16:00:15,639 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 16:00:15,639 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:01:16,322 - INFO - Current progress: 629/1000 counties (62.9%)
+2025-05-08 16:01:16,323 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.15
+2025-05-08 16:01:16,324 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 16:01:16,324 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:02:16,794 - ERROR - Error getting current progress: Expecting ',' delimiter: line 418 column 20757 (char 33603581)
+2025-05-08 16:02:16,796 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:03:17,460 - INFO - Current progress: 637/1000 counties (63.7%)
+2025-05-08 16:03:17,461 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.15
+2025-05-08 16:03:17,462 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 16:03:17,462 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:04:18,195 - INFO - Current progress: 639/1000 counties (63.9%)
+2025-05-08 16:04:18,195 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.15
+2025-05-08 16:04:18,196 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 16:04:18,196 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:05:19,029 - INFO - Current progress: 643/1000 counties (64.3%)
+2025-05-08 16:05:19,030 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.15
+2025-05-08 16:05:19,031 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 16:05:19,032 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:06:19,769 - INFO - Current progress: 649/1000 counties (64.9%)
+2025-05-08 16:06:19,770 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.15
+2025-05-08 16:06:19,771 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 16:06:19,771 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:07:20,670 - INFO - Current progress: 649/1000 counties (64.9%)
+2025-05-08 16:07:20,671 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.15
+2025-05-08 16:07:20,671 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 16:07:20,671 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:08:20,724 - ERROR - Error getting current progress: Expecting value: line 59 column 259583 (char 5160960)
+2025-05-08 16:08:20,726 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:09:21,477 - INFO - Current progress: 659/1000 counties (65.9%)
+2025-05-08 16:09:21,477 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.15
+2025-05-08 16:09:21,480 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 16:09:21,480 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:10:22,178 - INFO - Current progress: 659/1000 counties (65.9%)
+2025-05-08 16:10:22,178 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.15
+2025-05-08 16:10:22,179 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 16:10:22,179 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:11:22,999 - INFO - Current progress: 665/1000 counties (66.5%)
+2025-05-08 16:11:22,999 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.15
+2025-05-08 16:11:23,002 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 16:11:23,002 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:12:23,760 - INFO - Current progress: 669/1000 counties (66.9%)
+2025-05-08 16:12:23,760 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.15
+2025-05-08 16:12:23,761 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 16:12:23,762 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:13:24,480 - INFO - Current progress: 671/1000 counties (67.1%)
+2025-05-08 16:13:24,481 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.15
+2025-05-08 16:13:24,482 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 16:13:24,482 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:14:25,206 - ERROR - Error getting current progress: Expecting ',' delimiter: line 653 column 35632 (char 50933756)
+2025-05-08 16:14:25,207 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:15:26,974 - INFO - Current progress: 679/1000 counties (67.9%)
+2025-05-08 16:15:26,975 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.14
+2025-05-08 16:15:26,976 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 16:15:26,976 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:16:27,503 - ERROR - Error getting current progress: Expecting ',' delimiter: line 466 column 143752 (char 37806078)
+2025-05-08 16:16:27,504 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:17:28,305 - INFO - Current progress: 688/1000 counties (68.8%)
+2025-05-08 16:17:28,305 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.14
+2025-05-08 16:17:28,307 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 16:17:28,307 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:18:29,054 - INFO - Current progress: 689/1000 counties (68.9%)
+2025-05-08 16:18:29,055 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.14
+2025-05-08 16:18:29,056 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 16:18:29,056 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:19:29,889 - INFO - Current progress: 694/1000 counties (69.4%)
+2025-05-08 16:19:29,890 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.14
+2025-05-08 16:19:29,891 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 16:19:29,891 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:20:30,634 - INFO - Current progress: 699/1000 counties (69.9%)
+2025-05-08 16:20:30,634 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.15
+2025-05-08 16:20:30,635 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 16:20:30,635 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:21:31,198 - ERROR - Error getting current progress: Expecting ',' delimiter: line 518 column 114331 (char 41398267)
+2025-05-08 16:21:31,200 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:22:31,246 - ERROR - Error getting current progress: Expecting value: line 60 column 179061 (char 5341184)
+2025-05-08 16:22:31,247 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:23:32,096 - INFO - Current progress: 709/1000 counties (70.9%)
+2025-05-08 16:23:32,096 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.15
+2025-05-08 16:23:32,098 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 16:23:32,098 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:24:32,903 - INFO - Current progress: 711/1000 counties (71.1%)
+2025-05-08 16:24:32,904 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.15
+2025-05-08 16:24:32,904 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 16:24:32,904 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:25:32,920 - ERROR - Error getting current progress: Expecting ',' delimiter: line 21 column 71313 (char 1277951)
+2025-05-08 16:25:32,921 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:26:33,740 - INFO - Current progress: 719/1000 counties (71.9%)
+2025-05-08 16:26:33,740 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.15
+2025-05-08 16:26:33,741 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 16:26:33,741 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:27:34,547 - INFO - Current progress: 721/1000 counties (72.1%)
+2025-05-08 16:27:34,547 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.15
+2025-05-08 16:27:34,548 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 16:27:34,548 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:28:35,124 - ERROR - Error getting current progress: Expecting ',' delimiter: line 523 column 108252 (char 41754620)
+2025-05-08 16:28:35,126 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:29:36,021 - INFO - Current progress: 729/1000 counties (72.9%)
+2025-05-08 16:29:36,022 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.15
+2025-05-08 16:29:36,023 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 16:29:36,023 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:30:36,626 - ERROR - Error getting current progress: Expecting ',' delimiter: line 527 column 52976 (char 41983996)
+2025-05-08 16:30:36,628 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:31:37,502 - INFO - Current progress: 737/1000 counties (73.7%)
+2025-05-08 16:31:37,502 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.14
+2025-05-08 16:31:37,503 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 16:31:37,503 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:32:38,308 - INFO - Current progress: 739/1000 counties (73.9%)
+2025-05-08 16:32:38,308 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.14
+2025-05-08 16:32:38,308 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 16:32:38,308 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:33:39,236 - INFO - Current progress: 742/1000 counties (74.2%)
+2025-05-08 16:33:39,237 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.14
+2025-05-08 16:33:39,237 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 16:33:39,237 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:34:39,247 - ERROR - Error getting current progress: Expecting ',' delimiter: line 11 column 187515 (char 577536)
+2025-05-08 16:34:39,249 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:35:40,144 - INFO - Current progress: 749/1000 counties (74.9%)
+2025-05-08 16:35:40,145 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.14
+2025-05-08 16:35:40,147 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 16:35:40,147 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:36:41,144 - INFO - Current progress: 752/1000 counties (75.2%)
+2025-05-08 16:36:41,145 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.14
+2025-05-08 16:36:41,146 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 16:36:41,146 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:37:42,072 - INFO - Current progress: 758/1000 counties (75.8%)
+2025-05-08 16:37:42,072 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.14
+2025-05-08 16:37:42,073 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 16:37:42,073 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:38:42,848 - INFO - Current progress: 759/1000 counties (75.9%)
+2025-05-08 16:38:42,850 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.14
+2025-05-08 16:38:42,854 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 16:38:42,854 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:39:43,844 - INFO - Current progress: 763/1000 counties (76.3%)
+2025-05-08 16:39:43,845 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.14
+2025-05-08 16:39:43,846 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 16:39:43,846 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:40:44,276 - ERROR - Error getting current progress: Expecting ',' delimiter: line 418 column 20757 (char 33603581)
+2025-05-08 16:40:44,278 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:41:45,100 - INFO - Current progress: 769/1000 counties (76.9%)
+2025-05-08 16:41:45,100 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.14
+2025-05-08 16:41:45,101 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 16:41:45,101 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:42:45,944 - INFO - Current progress: 774/1000 counties (77.4%)
+2025-05-08 16:42:45,944 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.14
+2025-05-08 16:42:45,945 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 16:42:45,945 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:43:46,749 - INFO - Current progress: 779/1000 counties (77.9%)
+2025-05-08 16:43:46,750 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.14
+2025-05-08 16:43:46,751 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 16:43:46,751 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:44:47,565 - INFO - Current progress: 779/1000 counties (77.9%)
+2025-05-08 16:44:47,565 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.14
+2025-05-08 16:44:47,566 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 16:44:47,566 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:45:48,374 - INFO - Current progress: 785/1000 counties (78.5%)
+2025-05-08 16:45:48,375 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.14
+2025-05-08 16:45:48,376 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 16:45:48,376 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:46:49,144 - INFO - Current progress: 789/1000 counties (78.9%)
+2025-05-08 16:46:49,145 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.14
+2025-05-08 16:46:49,146 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 16:46:49,146 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:47:49,980 - INFO - Current progress: 791/1000 counties (79.1%)
+2025-05-08 16:47:49,981 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.14
+2025-05-08 16:47:49,982 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 16:47:49,982 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:48:50,154 - ERROR - Error getting current progress: Expecting ',' delimiter: line 208 column 233649 (char 17981438)
+2025-05-08 16:48:50,155 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:49:51,010 - INFO - Current progress: 799/1000 counties (79.9%)
+2025-05-08 16:49:51,010 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.14
+2025-05-08 16:49:51,011 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 16:49:51,011 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:50:51,792 - INFO - Current progress: 802/1000 counties (80.2%)
+2025-05-08 16:50:51,792 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.14
+2025-05-08 16:50:51,793 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 16:50:51,793 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:51:52,316 - ERROR - Error getting current progress: Expecting ',' delimiter: line 507 column 87568 (char 40611838)
+2025-05-08 16:51:52,318 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:52:53,199 - INFO - Current progress: 809/1000 counties (80.9%)
+2025-05-08 16:52:53,199 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.14
+2025-05-08 16:52:53,200 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 16:52:53,200 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:53:54,039 - INFO - Current progress: 813/1000 counties (81.3%)
+2025-05-08 16:53:54,040 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.14
+2025-05-08 16:53:54,040 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 16:53:54,040 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:54:54,509 - ERROR - Error getting current progress: Expecting ',' delimiter: line 463 column 85016 (char 37597182)
+2025-05-08 16:54:54,510 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:55:55,374 - INFO - Current progress: 819/1000 counties (81.9%)
+2025-05-08 16:55:55,375 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.14
+2025-05-08 16:55:55,376 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 16:55:55,376 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:56:56,258 - INFO - Current progress: 823/1000 counties (82.3%)
+2025-05-08 16:56:56,258 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.14
+2025-05-08 16:56:56,260 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 16:56:56,260 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:57:56,892 - ERROR - Error getting current progress: Expecting ',' delimiter: line 581 column 38115 (char 46219260)
+2025-05-08 16:57:56,894 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:58:57,778 - INFO - Current progress: 829/1000 counties (82.9%)
+2025-05-08 16:58:57,779 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.14
+2025-05-08 16:58:57,781 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 16:58:57,781 - INFO - Waiting 60 seconds for next check...
+2025-05-08 16:59:58,602 - INFO - Current progress: 834/1000 counties (83.4%)
+2025-05-08 16:59:58,603 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.14
+2025-05-08 16:59:58,604 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 16:59:58,604 - INFO - Waiting 60 seconds for next check...
+2025-05-08 17:00:59,472 - INFO - Current progress: 839/1000 counties (83.9%)
+2025-05-08 17:00:59,472 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.14
+2025-05-08 17:00:59,473 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 17:00:59,473 - INFO - Waiting 60 seconds for next check...
+2025-05-08 17:02:00,035 - ERROR - Error getting current progress: Expecting ',' delimiter: line 513 column 234964 (char 41078782)
+2025-05-08 17:02:00,037 - INFO - Waiting 60 seconds for next check...
+2025-05-08 17:03:00,929 - INFO - Current progress: 845/1000 counties (84.5%)
+2025-05-08 17:03:00,929 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.14
+2025-05-08 17:03:00,931 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 17:03:00,931 - INFO - Waiting 60 seconds for next check...
+2025-05-08 17:04:01,776 - INFO - Current progress: 849/1000 counties (84.9%)
+2025-05-08 17:04:01,776 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.14
+2025-05-08 17:04:01,777 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 17:04:01,777 - INFO - Waiting 60 seconds for next check...
+2025-05-08 17:05:02,638 - INFO - Current progress: 850/1000 counties (85.0%)
+2025-05-08 17:05:02,639 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.14
+2025-05-08 17:05:02,640 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 17:05:02,640 - INFO - Waiting 60 seconds for next check...
+2025-05-08 17:06:03,495 - INFO - Current progress: 856/1000 counties (85.6%)
+2025-05-08 17:06:03,496 - INFO - Average score: 0.17, Range: 0.00-1.00, Median: 0.14
+2025-05-08 17:06:03,497 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 17:06:03,497 - INFO - Waiting 60 seconds for next check...
+2025-05-08 17:07:04,352 - INFO - Current progress: 859/1000 counties (85.9%)
+2025-05-08 17:07:04,353 - INFO - Average score: 0.17, Range: 0.00-1.00, Median: 0.14
+2025-05-08 17:07:04,353 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 17:07:04,353 - INFO - Waiting 60 seconds for next check...
+2025-05-08 17:08:05,243 - INFO - Current progress: 861/1000 counties (86.1%)
+2025-05-08 17:08:05,244 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.14
+2025-05-08 17:08:05,245 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 17:08:05,245 - INFO - Waiting 60 seconds for next check...
+2025-05-08 17:09:06,197 - INFO - Current progress: 867/1000 counties (86.7%)
+2025-05-08 17:09:06,198 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.14
+2025-05-08 17:09:06,199 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 17:09:06,199 - INFO - Waiting 60 seconds for next check...
+2025-05-08 17:10:07,069 - INFO - Current progress: 869/1000 counties (86.9%)
+2025-05-08 17:10:07,069 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.14
+2025-05-08 17:10:07,070 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 17:10:07,070 - INFO - Waiting 60 seconds for next check...
+2025-05-08 17:11:07,898 - INFO - Current progress: 872/1000 counties (87.2%)
+2025-05-08 17:11:07,899 - INFO - Average score: 0.18, Range: 0.00-1.00, Median: 0.14
+2025-05-08 17:11:07,899 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 17:11:07,899 - INFO - Waiting 60 seconds for next check...
+2025-05-08 17:12:08,831 - INFO - Current progress: 877/1000 counties (87.7%)
+2025-05-08 17:12:08,832 - INFO - Average score: 0.17, Range: 0.00-1.00, Median: 0.14
+2025-05-08 17:12:08,832 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 17:12:08,832 - INFO - Waiting 60 seconds for next check...
+2025-05-08 17:13:09,732 - INFO - Current progress: 879/1000 counties (87.9%)
+2025-05-08 17:13:09,733 - INFO - Average score: 0.17, Range: 0.00-1.00, Median: 0.14
+2025-05-08 17:13:09,735 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 17:13:09,735 - INFO - Waiting 60 seconds for next check...
+2025-05-08 17:14:10,425 - ERROR - Error getting current progress: Expecting ',' delimiter: line 634 column 48890 (char 49541115)
+2025-05-08 17:14:10,428 - INFO - Waiting 60 seconds for next check...
+2025-05-08 17:15:11,417 - INFO - Current progress: 888/1000 counties (88.8%)
+2025-05-08 17:15:11,418 - INFO - Average score: 0.17, Range: 0.00-1.00, Median: 0.14
+2025-05-08 17:15:11,420 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 17:15:11,420 - INFO - Waiting 60 seconds for next check...
+2025-05-08 17:16:12,298 - INFO - Current progress: 889/1000 counties (88.9%)
+2025-05-08 17:16:12,299 - INFO - Average score: 0.17, Range: 0.00-1.00, Median: 0.14
+2025-05-08 17:16:12,300 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 17:16:12,300 - INFO - Waiting 60 seconds for next check...
+2025-05-08 17:17:13,249 - INFO - Current progress: 893/1000 counties (89.3%)
+2025-05-08 17:17:13,249 - INFO - Average score: 0.17, Range: 0.00-1.00, Median: 0.14
+2025-05-08 17:17:13,250 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 17:17:13,250 - INFO - Waiting 60 seconds for next check...
+2025-05-08 17:18:13,475 - ERROR - Error getting current progress: Expecting ',' delimiter: line 230 column 45348 (char 19582973)
+2025-05-08 17:18:13,477 - INFO - Waiting 60 seconds for next check...
+2025-05-08 17:19:14,399 - INFO - Current progress: 899/1000 counties (89.9%)
+2025-05-08 17:19:14,400 - INFO - Average score: 0.17, Range: 0.00-1.00, Median: 0.14
+2025-05-08 17:19:14,401 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 17:19:14,401 - INFO - Waiting 60 seconds for next check...
+2025-05-08 17:20:15,058 - ERROR - Error getting current progress: Expecting value: line 584 column 226913 (char 46587900)
+2025-05-08 17:20:15,060 - INFO - Waiting 60 seconds for next check...
+2025-05-08 17:21:15,938 - INFO - Current progress: 908/1000 counties (90.8%)
+2025-05-08 17:21:15,938 - INFO - Average score: 0.17, Range: 0.00-1.00, Median: 0.14
+2025-05-08 17:21:15,939 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 17:21:15,939 - INFO - Waiting 60 seconds for next check...
+2025-05-08 17:22:16,888 - INFO - Current progress: 909/1000 counties (90.9%)
+2025-05-08 17:22:16,889 - INFO - Average score: 0.17, Range: 0.00-1.00, Median: 0.13
+2025-05-08 17:22:16,890 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 17:22:16,890 - INFO - Waiting 60 seconds for next check...
+2025-05-08 17:23:17,861 - INFO - Current progress: 913/1000 counties (91.3%)
+2025-05-08 17:23:17,862 - INFO - Average score: 0.17, Range: 0.00-1.00, Median: 0.13
+2025-05-08 17:23:17,863 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 17:23:17,863 - INFO - Waiting 60 seconds for next check...
+2025-05-08 17:24:18,317 - ERROR - Error getting current progress: Expecting ',' delimiter: line 447 column 17802 (char 36192254)
+2025-05-08 17:24:18,319 - INFO - Waiting 60 seconds for next check...
+2025-05-08 17:25:19,297 - INFO - Current progress: 919/1000 counties (91.9%)
+2025-05-08 17:25:19,297 - INFO - Average score: 0.17, Range: 0.00-1.00, Median: 0.13
+2025-05-08 17:25:19,298 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 17:25:19,298 - INFO - Waiting 60 seconds for next check...
+2025-05-08 17:26:19,757 - ERROR - Error getting current progress: Expecting ',' delimiter: line 454 column 30308 (char 36745214)
+2025-05-08 17:26:19,759 - INFO - Waiting 60 seconds for next check...
+2025-05-08 17:27:20,773 - INFO - Current progress: 929/1000 counties (92.9%)
+2025-05-08 17:27:20,774 - INFO - Average score: 0.17, Range: 0.00-1.00, Median: 0.13
+2025-05-08 17:27:20,776 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 17:27:20,777 - INFO - Waiting 60 seconds for next check...
+2025-05-08 17:28:21,773 - INFO - Current progress: 929/1000 counties (92.9%)
+2025-05-08 17:28:21,774 - INFO - Average score: 0.17, Range: 0.00-1.00, Median: 0.13
+2025-05-08 17:28:21,776 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 17:28:21,776 - INFO - Waiting 60 seconds for next check...
+2025-05-08 17:29:22,745 - INFO - Current progress: 934/1000 counties (93.4%)
+2025-05-08 17:29:22,746 - INFO - Average score: 0.17, Range: 0.00-1.00, Median: 0.13
+2025-05-08 17:29:22,746 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 17:29:22,746 - INFO - Waiting 60 seconds for next check...
+2025-05-08 17:30:23,681 - INFO - Current progress: 939/1000 counties (93.9%)
+2025-05-08 17:30:23,682 - INFO - Average score: 0.17, Range: 0.00-1.00, Median: 0.13
+2025-05-08 17:30:23,683 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 17:30:23,683 - INFO - Waiting 60 seconds for next check...
+2025-05-08 17:31:24,619 - INFO - Current progress: 939/1000 counties (93.9%)
+2025-05-08 17:31:24,620 - INFO - Average score: 0.17, Range: 0.00-1.00, Median: 0.13
+2025-05-08 17:31:24,621 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 17:31:24,621 - INFO - Waiting 60 seconds for next check...
+2025-05-08 17:32:25,597 - INFO - Current progress: 944/1000 counties (94.4%)
+2025-05-08 17:32:25,598 - INFO - Average score: 0.17, Range: 0.00-1.00, Median: 0.14
+2025-05-08 17:32:25,598 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 17:32:25,599 - INFO - Waiting 60 seconds for next check...
+2025-05-08 17:33:26,560 - INFO - Current progress: 949/1000 counties (94.9%)
+2025-05-08 17:33:26,561 - INFO - Average score: 0.17, Range: 0.00-1.00, Median: 0.13
+2025-05-08 17:33:26,562 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 17:33:26,562 - INFO - Waiting 60 seconds for next check...
+2025-05-08 17:34:27,486 - INFO - Current progress: 949/1000 counties (94.9%)
+2025-05-08 17:34:27,487 - INFO - Average score: 0.17, Range: 0.00-1.00, Median: 0.13
+2025-05-08 17:34:27,488 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 17:34:27,488 - INFO - Waiting 60 seconds for next check...
+2025-05-08 17:35:28,529 - INFO - Current progress: 954/1000 counties (95.4%)
+2025-05-08 17:35:28,530 - INFO - Average score: 0.17, Range: 0.00-1.00, Median: 0.13
+2025-05-08 17:35:28,530 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 17:35:28,530 - INFO - Waiting 60 seconds for next check...
+2025-05-08 17:36:29,464 - INFO - Current progress: 959/1000 counties (95.9%)
+2025-05-08 17:36:29,465 - INFO - Average score: 0.17, Range: 0.00-1.00, Median: 0.13
+2025-05-08 17:36:29,467 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 17:36:29,467 - INFO - Waiting 60 seconds for next check...
+2025-05-08 17:37:30,490 - INFO - Current progress: 959/1000 counties (95.9%)
+2025-05-08 17:37:30,491 - INFO - Average score: 0.17, Range: 0.00-1.00, Median: 0.13
+2025-05-08 17:37:30,492 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 17:37:30,492 - INFO - Waiting 60 seconds for next check...
+2025-05-08 17:38:31,033 - ERROR - Error getting current progress: Expecting ',' delimiter: line 536 column 145873 (char 42795004)
+2025-05-08 17:38:31,035 - INFO - Waiting 60 seconds for next check...
+2025-05-08 17:39:31,986 - INFO - Current progress: 969/1000 counties (96.9%)
+2025-05-08 17:39:31,986 - INFO - Average score: 0.17, Range: 0.00-1.00, Median: 0.13
+2025-05-08 17:39:31,989 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 17:39:31,989 - INFO - Waiting 60 seconds for next check...
+2025-05-08 17:40:32,324 - ERROR - Error getting current progress: Expecting ',' delimiter: line 319 column 2963 (char 27303934)
+2025-05-08 17:40:32,326 - INFO - Waiting 60 seconds for next check...
+2025-05-08 17:41:32,658 - ERROR - Error getting current progress: Expecting ',' delimiter: line 300 column 32054 (char 25735166)
+2025-05-08 17:41:32,659 - INFO - Waiting 60 seconds for next check...
+2025-05-08 17:42:33,623 - INFO - Current progress: 979/1000 counties (97.9%)
+2025-05-08 17:42:33,624 - INFO - Average score: 0.17, Range: 0.00-1.00, Median: 0.13
+2025-05-08 17:42:33,625 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 17:42:33,625 - INFO - Waiting 60 seconds for next check...
+2025-05-08 17:43:33,868 - ERROR - Error getting current progress: Expecting value: line 233 column 200344 (char 20025342)
+2025-05-08 17:43:33,869 - INFO - Waiting 60 seconds for next check...
+2025-05-08 17:44:34,800 - ERROR - Error getting current progress: Expecting ',' delimiter: line 861 column 68748 (char 64503804)
+2025-05-08 17:44:34,803 - INFO - Waiting 60 seconds for next check...
+2025-05-08 17:45:35,826 - INFO - Current progress: 989/1000 counties (98.9%)
+2025-05-08 17:45:35,827 - INFO - Average score: 0.17, Range: 0.00-1.00, Median: 0.13
+2025-05-08 17:45:35,829 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 17:45:35,829 - INFO - Waiting 60 seconds for next check...
+2025-05-08 17:46:36,892 - INFO - Current progress: 990/1000 counties (99.0%)
+2025-05-08 17:46:36,892 - INFO - Average score: 0.17, Range: 0.00-1.00, Median: 0.13
+2025-05-08 17:46:36,893 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 17:46:36,893 - INFO - Waiting 60 seconds for next check...
+2025-05-08 17:47:37,928 - INFO - Current progress: 995/1000 counties (99.5%)
+2025-05-08 17:47:37,929 - INFO - Average score: 0.17, Range: 0.00-1.00, Median: 0.13
+2025-05-08 17:47:37,931 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 17:47:37,931 - INFO - Waiting 60 seconds for next check...
+2025-05-08 17:48:38,918 - INFO - Current progress: 999/1000 counties (99.9%)
+2025-05-08 17:48:38,919 - INFO - Average score: 0.17, Range: 0.00-1.00, Median: 0.13
+2025-05-08 17:48:38,921 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 17:48:38,921 - INFO - Waiting 60 seconds for next check...
+2025-05-08 17:49:39,767 - ERROR - Error getting current progress: Expecting ',' delimiter: line 803 column 29737 (char 60411900)
+2025-05-08 17:49:39,769 - INFO - Waiting 60 seconds for next check...
+2025-05-08 17:50:40,797 - INFO - Current progress: 1000/1000 counties (100.0%)
+2025-05-08 17:50:40,797 - INFO - Average score: 0.17, Range: 0.00-1.00, Median: 0.13
+2025-05-08 17:50:40,800 - INFO - Updated mapbox_shapefile_counties.html
+2025-05-08 17:50:40,801 - INFO - Reached target count of 1000 counties

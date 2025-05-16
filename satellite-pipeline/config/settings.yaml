@@ -1,0 +1,61 @@
+# Satellite Data Collection Pipeline Configuration
+
+# Google Earth Engine settings
+earth_engine:
+  service_account_key_path: "config/gee_credentials.json"
+  collection_id: "COPERNICUS/S2_SR_HARMONIZED"
+  cloud_filter_threshold: 30  # Maximum cloud cover percentage to accept
+  scale: 20  # Resolution in meters
+
+# Data collection settings
+collection:
+  default_interval: "weekly"  # daily, weekly, monthly
+  sample_points: 500  # Number of points to sample per county
+  indices:
+    - "NDVI"   # Vegetation index
+    - "NDBI"   # Built-up index
+    - "NDWI"   # Water index
+    - "MNDWI"  # Modified water index
+    - "UI"     # Urban index
+    - "NDMI"   # Moisture index
+
+# Processing settings
+processing:
+  obsolescence_weights:
+    built_up: 0.4       # Weight for built-up areas (NDBI)
+    veg_health: 0.4     # Weight for vegetation health (NDVI)
+    urban_index: 0.2    # Weight for urban index (UI)
+  
+  growth_potential_weights:
+    veg_health: 0.4         # Weight for vegetation health (moderate NDVI)
+    built_up_potential: 0.4 # Weight for moderate built-up areas (NDBI)
+    water_availability: 0.2 # Weight for water availability (NDWI/MNDWI)
+  
+  scoring:
+    percentile: 75      # Percentile to use for final score calculation
+
+# Storage settings
+storage:
+  raw_data_dir: "data/raw"
+  processed_data_dir: "data/processed"
+  time_series_dir: "data/processed/time_series"
+  use_compression: true
+
+# API settings
+api:
+  host: "localhost"
+  port: 8000
+  endpoint_prefix: "/api/v1"
+  rate_limit: 100  # Requests per minute
+
+# Dashboard settings
+dashboard:
+  host: "localhost"
+  port: 5000
+  debug: true
+
+# System settings
+system:
+  log_level: "INFO"  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  max_retries: 3     # Maximum retries for failed operations
+  timeout: 300       # Timeout in seconds for operations

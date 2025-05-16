@@ -1,0 +1,123 @@
+TOP COUNTIES WITH HIGH OBSOLESCENCE AND HIGH GROWTH POTENTIAL
+=============================================================
+
+1. Sample County 70
+   State: 25
+   Obsolescence Score: 0.9869
+   Growth Potential: 0.8597
+   Combined Score: 1.8466
+
+2. Sample County 51
+   State: 11
+   Obsolescence Score: 0.9696
+   Growth Potential: 1.0000
+   Combined Score: 1.9696
+
+3. Sample County 35
+   State: 07
+   Obsolescence Score: 0.9656
+   Growth Potential: 1.0000
+   Combined Score: 1.9656
+
+4. Sample County 2
+   State: 06
+   Obsolescence Score: 0.9507
+   Growth Potential: 0.8923
+   Combined Score: 1.8430
+
+5. Sample County 34
+   State: 37
+   Obsolescence Score: 0.9489
+   Growth Potential: 0.6067
+   Combined Score: 1.5556
+
+6. Sample County 56
+   State: 18
+   Obsolescence Score: 0.9219
+   Growth Potential: 0.5075
+   Combined Score: 1.4293
+
+7. High-High County 7
+   State: 08
+   Obsolescence Score: 0.9126
+   Growth Potential: 0.8501
+   Combined Score: 1.7627
+
+8. Sample County 44
+   State: 38
+   Obsolescence Score: 0.9093
+   Growth Potential: 0.5598
+   Combined Score: 1.4691
+
+9. Sample County 54
+   State: 19
+   Obsolescence Score: 0.8948
+   Growth Potential: 0.7354
+   Combined Score: 1.6302
+
+10. Sample County 89
+   State: 06
+   Obsolescence Score: 0.8872
+   Growth Potential: 0.7714
+   Combined Score: 1.6586
+
+11. High-High County 5
+   State: 26
+   Obsolescence Score: 0.8693
+   Growth Potential: 0.9395
+   Combined Score: 1.8089
+
+12. Sample County 8
+   State: 03
+   Obsolescence Score: 0.8662
+   Growth Potential: 0.9806
+   Combined Score: 1.8468
+
+13. Sample County 81
+   State: 37
+   Obsolescence Score: 0.8631
+   Growth Potential: 0.5843
+   Combined Score: 1.4474
+
+14. High-High County 10
+   State: 46
+   Obsolescence Score: 0.8589
+   Growth Potential: 0.9072
+   Combined Score: 1.7661
+
+15. High-High County 6
+   State: 16
+   Obsolescence Score: 0.8480
+   Growth Potential: 0.9076
+   Combined Score: 1.7557
+
+16. Sample County 13
+   State: 15
+   Obsolescence Score: 0.8324
+   Growth Potential: 1.0000
+   Combined Score: 1.8324
+
+17. Sample County 63
+   State: 22
+   Obsolescence Score: 0.8287
+   Growth Potential: 0.8530
+   Combined Score: 1.6817
+
+18. Sample County 36
+   State: 04
+   Obsolescence Score: 0.8084
+   Growth Potential: 0.5508
+   Combined Score: 1.3592
+
+19. High-High County 9
+   State: 32
+   Obsolescence Score: 0.7853
+   Growth Potential: 0.9124
+   Combined Score: 1.6977
+
+20. Sample County 26
+   State: 37
+   Obsolescence Score: 0.7852
+   Growth Potential: 0.6430
+   Combined Score: 1.4282
+

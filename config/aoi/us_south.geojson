@@ -1,0 +1,24 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "US South Region",
+        "region": "south"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-94.5, 29.5],
+            [-94.5, 31.0],
+            [-91.0, 31.0],
+            [-91.0, 29.5],
+            [-94.5, 29.5]
+          ]
+        ]
+      }
+    }
+  ]
+}

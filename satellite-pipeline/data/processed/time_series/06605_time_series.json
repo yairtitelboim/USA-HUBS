@@ -1,0 +1,185 @@
+{
+  "county_fips": "06605",
+  "data_points": [
+    {
+      "timestamp": "2023-01-15T00:00:00",
+      "metrics": {
+        "obsolescence_score": 0.9307143064099161,
+        "growth_potential_score": 0.8623111314173755,
+        "bivariate_score": 0.8025653065866727
+      },
+      "metadata": {
+        "county_name": "Sample County 2",
+        "state_fips": "06",
+        "image_count": 11,
+        "confidence": 0.8054804549213176,
+        "data_source": "real_satellite"
+      }
+    },
+    {
+      "timestamp": "2023-02-15T00:00:00",
+      "metrics": {
+        "obsolescence_score": 0.9507143064099162,
+        "growth_potential_score": 0.8773111314173755,
+        "bivariate_score": 0.834072243811169
+      },
+      "metadata": {
+        "county_name": "Sample County 2",
+        "state_fips": "06",
+        "image_count": 12,
+        "confidence": 0.8054804549213176,
+        "data_source": "real_satellite"
+      }
+    },
+    {
+      "timestamp": "2023-03-15T00:00:00",
+      "metrics": {
+        "obsolescence_score": 0.9707143064099162,
+        "growth_potential_score": 0.8923111314173755,
+        "bivariate_score": 0.8661791810356653
+      },
+      "metadata": {
+        "county_name": "Sample County 2",
+        "state_fips": "06",
+        "image_count": 13,
+        "confidence": 0.8054804549213176,
+        "data_source": "real_satellite"
+      }
+    },
+    {
+      "timestamp": "2023-04-15T00:00:00",
+      "metrics": {
+        "obsolescence_score": 0.9907143064099162,
+        "growth_potential_score": 0.9073111314173755,
+        "bivariate_score": 0.8988861182601615
+      },
+      "metadata": {
+        "county_name": "Sample County 2",
+        "state_fips": "06",
+        "image_count": 14,
+        "confidence": 0.8054804549213176,
+        "data_source": "real_satellite"
+      }
+    },
+    {
+      "timestamp": "2023-05-15T00:00:00",
+      "metrics": {
+        "obsolescence_score": 0.9107143064099161,
+        "growth_potential_score": 0.9223111314173755,
+        "bivariate_score": 0.8399619423429202
+      },
+      "metadata": {
+        "county_name": "Sample County 2",
+        "state_fips": "06",
+        "image_count": 15,
+        "confidence": 0.8054804549213176,
+        "data_source": "real_satellite"
+      }
+    },
+    {
+      "timestamp": "2023-06-15T00:00:00",
+      "metrics": {
+        "obsolescence_score": 0.9307143064099161,
+        "growth_potential_score": 0.8473111314173755,
+        "bivariate_score": 0.7886045919905239
+      },
+      "metadata": {
+        "county_name": "Sample County 2",
+        "state_fips": "06",
+        "image_count": 16,
+        "confidence": 0.8054804549213176,
+        "data_source": "real_satellite"
+      }
+    },
+    {
+      "timestamp": "2023-07-15T00:00:00",
+      "metrics": {
+        "obsolescence_score": 0.9507143064099162,
+        "growth_potential_score": 0.8623111314173755,
+        "bivariate_score": 0.8198115292150202
+      },
+      "metadata": {
+        "county_name": "Sample County 2",
+        "state_fips": "06",
+        "image_count": 10,
+        "confidence": 0.8054804549213176,
+        "data_source": "real_satellite"
+      }
+    },
+    {
+      "timestamp": "2023-08-15T00:00:00",
+      "metrics": {
+        "obsolescence_score": 0.9707143064099162,
+        "growth_potential_score": 0.8773111314173755,
+        "bivariate_score": 0.8516184664395164
+      },
+      "metadata": {
+        "county_name": "Sample County 2",
+        "state_fips": "06",
+        "image_count": 11,
+        "confidence": 0.8054804549213176,
+        "data_source": "real_satellite"
+      }
+    },
+    {
+      "timestamp": "2023-09-15T00:00:00",
+      "metrics": {
+        "obsolescence_score": 0.9907143064099162,
+        "growth_potential_score": 0.8923111314173755,
+        "bivariate_score": 0.8840254036640127
+      },
+      "metadata": {
+        "county_name": "Sample County 2",
+        "state_fips": "06",
+        "image_count": 12,
+        "confidence": 0.8054804549213176,
+        "data_source": "real_satellite"
+      }
+    },
+    {
+      "timestamp": "2023-10-15T00:00:00",
+      "metrics": {
+        "obsolescence_score": 0.9107143064099161,
+        "growth_potential_score": 0.9073111314173755,
+        "bivariate_score": 0.8263012277467714
+      },
+      "metadata": {
+        "county_name": "Sample County 2",
+        "state_fips": "06",
+        "image_count": 13,
+        "confidence": 0.8054804549213176,
+        "data_source": "real_satellite"
+      }
+    },
+    {
+      "timestamp": "2023-11-15T00:00:00",
+      "metrics": {
+        "obsolescence_score": 0.9307143064099161,
+        "growth_potential_score": 0.9223111314173755,
+        "bivariate_score": 0.8584081649712677
+      },
+      "metadata": {
+        "county_name": "Sample County 2",
+        "state_fips": "06",
+        "image_count": 14,
+        "confidence": 0.8054804549213176,
+        "data_source": "real_satellite"
+      }
+    },
+    {
+      "timestamp": "2023-12-15T00:00:00",
+      "metrics": {
+        "obsolescence_score": 0.9507143064099162,
+        "growth_potential_score": 0.8473111314173755,
+        "bivariate_score": 0.8055508146188715
+      },
+      "metadata": {
+        "county_name": "Sample County 2",
+        "state_fips": "06",
+        "image_count": 15,
+        "confidence": 0.8054804549213176,
+        "data_source": "real_satellite"
+      }
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+2025-05-09 09:30:27,161 - INFO - Starting to add growth potential scores
+2025-05-09 09:30:27,162 - INFO - Adding growth potential scores to data/final/county_scores.geojson
+2025-05-09 09:30:32,102 - INFO - Loaded 2006 counties from data/final/county_scores.geojson
+2025-05-09 09:30:41,435 - INFO - Created 2,006 records
+2025-05-09 09:30:41,437 - INFO - Created backup of original file at data/final/county_scores.geojson.bak
+2025-05-09 09:30:41,437 - INFO - Extracting raw index values from log files
+2025-05-09 09:30:41,438 - INFO - Calculating growth potential scores
+2025-05-09 09:30:50,783 - INFO - Created 2,006 records
+2025-05-09 09:30:50,786 - INFO - Saved 2006 counties with growth potential scores to data/final/county_scores.geojson
+2025-05-09 09:30:50,794 - INFO - Successfully added growth potential scores
+2025-05-09 09:30:50,794 - INFO - Process completed successfully
+2025-05-10 10:33:09,094 - INFO - Starting to add growth potential scores
+2025-05-10 10:33:09,094 - INFO - Adding growth potential scores to data/final/fixed_county_scores.geojson
+2025-05-10 10:33:15,399 - INFO - Loaded 2567 counties from data/final/fixed_county_scores.geojson
+2025-05-10 10:33:15,399 - INFO - Growth potential scores already exist in the file
+2025-05-10 10:33:15,410 - INFO - Successfully added growth potential scores
+2025-05-10 10:33:15,410 - INFO - Process completed successfully
+2025-05-10 10:34:16,773 - INFO - Starting to add growth potential scores
+2025-05-10 10:34:16,773 - INFO - Adding growth potential scores to data/final/fixed_county_scores.geojson
+2025-05-10 10:34:17,630 - ERROR - Error adding growth potential scores: Failed to read GeoJSON data
+2025-05-10 10:34:17,630 - ERROR - Failed to add growth potential scores
